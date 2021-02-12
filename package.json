@@ -1,5 +1,5 @@
 {
-  "name": "multilingual-admin-vue",
+  "name": "bedrock-users-vue",
   "version": "1.0.6",
   "description": "Vue component library for multilingual",
   "keywords": [
@@ -9,12 +9,12 @@
   "license": "",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yormy/multilingual-admin-vue.git"
+    "url": "git+https://github.com/yormy/bedrock-users-vue.git"
   },
   "bugs": {
-    "url": "https://github.com/yormy/multilingual-admin-vue/issues"
+    "url": "https://github.com/yormy/bedrock-users-vue/issues"
   },
-  "homepage": "https://github.com/yormy/multilingual-admin-vue#readme",
+  "homepage": "https://github.com/yormy/bedrock-users-vue#readme",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
   "scripts": {

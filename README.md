@@ -3,17 +3,17 @@
 # Installation
 ### Use Locally
 ```
-npm i -D ../multilingual-admin-vue
+npm i -D ../bedrock-users-vue
 ```
 
 ### Use Npm version
 ```
-npm i -D yormy-multilingual-admin-vue
+npm i -D yormy-bedrock-users-vue
 ```
 
 # Using components
 ```
-import { HelloComponent } from "multilingual-admin-vue";
+import { HelloComponent } from "bedrock-users-vue";
 
 components: {
     HelloComponent
