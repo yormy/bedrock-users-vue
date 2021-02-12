@@ -1,0 +1,20 @@
+.status-icon {
+    font-weight: 600;
+    font-family: "Font Awesome 5 Free";
+}
+
+.mytextwithicon {
+    position:relative;
+    color:red;
+}
+.mytextwithicon:before {
+    content: "\f0a1";
+}
+
+.anothericon {
+    position:relative;
+    color:green;
+}
+.anothericon:before {
+    content: "\f0c0";
+}

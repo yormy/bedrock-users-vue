@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "declarationDir": "lib",
+    "target": "es5",
+    "module": "es2015",
+    "sourceMap": true,
+    "declaration": true,
+    "importHelpers": true,
+    "strict": true,
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports" : true,
+    "allowJs": true
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"]
+}

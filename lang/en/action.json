@@ -1,0 +1,12 @@
+{
+  "ok": "ok1",
+  "delete": "delete1",
+  "add" : "add1",
+  "cancel" : "cancel1",
+  "update" : "----",
+  "activate" : "activate1",
+  "save" : "save1",
+  "update-and-next" : "update and next1",
+  "search" : "search1",
+  "select" : "select"
+}
