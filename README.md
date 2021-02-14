@@ -1,57 +1,24 @@
-# Multilingual Admin Vue Component
-
-# Installation
-### Use Locally
-```
-npm i -D ../bedrock-users-vue
-```
-
-### Use Npm version
-```
-npm i -D yormy-bedrock-users-vue
-```
-
-# Using components
-```
-import { HelloComponent } from "bedrock-users-vue";
-
-components: {
-    HelloComponent
-}
-  
-```
-
-# Building & Publishing
-
-## step 1 build the package
-```
-npm install
-npm run build
-```
-
-## step 2: Publish
-### setup for npm
-``` 
-npm adduser
-```
-
-### publish
-```
-npm publish
-```
+#SETUP
+[setup](../setup.md)
 
 
-# Typescript
-``` 
-<script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
-import { SampleComponent } from "vue-component-library";
+## Changelog
 
-@Component({
-  components: {
-    SampleComponent
-  }
-})
-export default class App extends Vue {}
-</script>
-```
+Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
+
+## Contributing
+
+Please see [CONTRIBUTING](.github/CONTRIBUTING.md) for details.
+
+## Security Vulnerabilities
+
+Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
+
+## Credits
+
+- [Mexion](https://github.com/mexion)
+- [All Contributors](../../contributors)
+
+## License
+
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.

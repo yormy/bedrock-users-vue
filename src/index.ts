@@ -1,9 +1,10 @@
-import IntoLocaleSwitcher from "./Shared/IntoLocaleSwitcher.vue";
-import MultilingualOverview from "./Overview/MultilingualOverview.vue";
+import LogActivityEmails from './New/LogActivityEmails.vue';
+import LogActivityActivities from './New/LogActivityActivities.vue';
+import LogActivityAudit from './New/LogActivityAudit.vue';
+import Registrations from './New/Registrations.vue';
+import Subscriptions from './New/Subscriptions.vue';
+import Users from './New/Users.vue';
 
-import ProjectEdit from "./Projects/ProjectEdit.vue";
-
-import LabelIndex from "./Labels/LabelIndex.vue";
 
 import english from '../lang/en/_index';
 
@@ -12,9 +13,11 @@ const translations = {
 }
 
 export {
-  IntoLocaleSwitcher,
-  MultilingualOverview,
-  ProjectEdit,
-  LabelIndex,
+  LogActivityEmails,
+  LogActivityActivities,
+  LogActivityAudit,
+  Registrations,
+  Subscriptions,
+  Users,
   translations
 };
