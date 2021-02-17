@@ -56,7 +56,7 @@
 </template>
 
 <script>
-import { mergeErrors } from '../plugins/formhelper';
+import { mergeErrors } from 'bedrock-vue-components';
 
 export default {
   props: {

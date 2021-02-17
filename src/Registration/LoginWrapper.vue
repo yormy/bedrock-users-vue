@@ -60,7 +60,7 @@
 </template>
 
 <script>
-import Login from '@components/registration/Login.vue';
+import Login from './Login.vue';
 import ResetLoginname from './ResetLoginname.vue';
 import ResetPassword from './ResetPassword.vue';
 

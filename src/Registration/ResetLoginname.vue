@@ -67,7 +67,7 @@
 
 <script>
 import EmailInput from './EmailInput.vue';
-import { mergeErrors } from '../plugins/formhelper';
+import { mergeErrors } from 'bedrock-vue-components';
 
 export default {
   components: {

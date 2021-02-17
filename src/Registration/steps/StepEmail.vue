@@ -100,8 +100,7 @@
 </template>
 
 <script>
-import { mergeErrors } from '../../plugins/formhelper';
-
+import { mergeErrors } from 'bedrock-vue-components';
 import EmailInput from '../EmailInput.vue';
 
 export default {

@@ -112,7 +112,7 @@
 
 <script>
 import CodeInput from './CodeInput.vue';
-import { mergeErrors } from '../plugins/formhelper';
+import { mergeErrors } from 'bedrock-vue-components';
 
 export default {
   components: {

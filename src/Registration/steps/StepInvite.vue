@@ -30,9 +30,8 @@
 </template>
 
 <script>
-// import axios from 'axios';
 import CodeInput from '../CodeInput.vue';
-import { getFirstValidationError } from '../../plugins/formhelper';
+import { getFirstValidationError } from 'bedrock-vue-components';
 
 export default {
   components: {

@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import AppearingBullets from '@components/shared/AppearingBullets.vue';
+import { AppearingBullets } from 'bedrock-vue-components';
 
 export default {
   components: {
