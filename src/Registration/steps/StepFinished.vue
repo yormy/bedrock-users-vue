@@ -82,7 +82,7 @@ export default {
 
       this.$http
         .post(this.registrationFinishingActionUrl, data)
-        .then(response => {
+        .then((response) => {
           if (response.data.success) {
             this.$emit('finished');
           }

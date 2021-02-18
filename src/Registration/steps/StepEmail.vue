@@ -204,12 +204,12 @@ export default {
 
       this.$http
         .post(this.registrationActionUrl, data)
-        .then(response => {
+        .then((response) => {
           if (response.data.success) {
             this.$emit('finished', response.data.data);
           }
         })
-        .catch(error => {
+        .catch((error) => {
           this.apiErrors = mergeErrors(error);
 
           if (error.response.data.data && error.response.data.data.warnings) {

@@ -106,7 +106,7 @@ export default {
 
       this.$http
         .post(this.verifyActionUrl, data)
-        .then(response => {
+        .then((response) => {
           if (response.data.success) {
             this.isSubmitting = false;
             this.resetErrorState();
@@ -115,7 +115,7 @@ export default {
           }
           this.form.isSubmittingSubmit = false;
         })
-        .catch(error => {
+        .catch((error) => {
           this.resetErrorState();
           this.apiErrors = mergeErrors(error);
           this.form.isSubmittingSubmit = false;

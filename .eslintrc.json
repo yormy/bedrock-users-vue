@@ -7,8 +7,7 @@
   "extends": [
     "plugin:vue/essential",
     "airbnb-base",
-    "plugin:prettier/recommended",
-    "@vue/airbnb"
+    "plugin:prettier/recommended"
   ],
   "parserOptions": {
     "ecmaVersion": 11,

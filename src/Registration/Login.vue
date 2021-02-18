@@ -162,13 +162,17 @@
 </template>
 
 <script>
+import {
+  AppearingBullets,
+  removeTokensUser,
+  removeTokensAdmin,
+  storeTokens,
+  mergeErrors,
+} from 'bedrock-vue-components';
+
 // todo npm
 import API_RESPONSE from '@components/helpers/apiCodes';
 import CodeInput from './CodeInput.vue';
-import { AppearingBullets } from 'bedrock-vue-components';
-
-import { removeTokensUser, removeTokensAdmin, storeTokens } from 'bedrock-vue-components';
-import { mergeErrors } from 'bedrock-vue-components';
 
 export default {
   components: {
@@ -299,10 +303,7 @@ export default {
       const parts = value.split(`; ${name}=`);
       let cookieValue = '';
       if (parts.length === 2) {
-        cookieValue = parts
-          .pop()
-          .split(';')
-          .shift();
+        cookieValue = parts.pop().split(';').shift();
       }
 
       if (cookieValue !== undefined) {
@@ -334,7 +335,7 @@ export default {
       this.clearResponses();
       this.$http
         .post(this.loginActionUrl, data)
-        .then(response => {
+        .then((response) => {
           if (response.data.success) {
             this.successMessage = response.data.message;
             storeTokens(response.data.data, this.loginas);
@@ -344,7 +345,7 @@ export default {
             }, 0);
           }
         })
-        .catch(error => {
+        .catch((error) => {
           this.clearInput();
           this.apiErrors = mergeErrors(error);
           if (error.response.data.data) {

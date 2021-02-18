@@ -111,8 +111,8 @@
 </template>
 
 <script>
-import CodeInput from './CodeInput.vue';
 import { mergeErrors } from 'bedrock-vue-components';
+import CodeInput from './CodeInput.vue';
 
 export default {
   components: {
@@ -228,7 +228,7 @@ export default {
 
       this.$http
         .post(this.verifyActionUrl, data)
-        .then(response => {
+        .then((response) => {
           if (response.data.success) {
             this.isSubmitting = false;
             this.resetErrorState();
@@ -237,7 +237,7 @@ export default {
           }
           this.form.isSubmittingSubmit = false;
         })
-        .catch(error => {
+        .catch((error) => {
           this.resetErrorState();
           this.apiErrors = mergeErrors(error);
           this.confirmCode = false;
@@ -262,14 +262,14 @@ export default {
 
       this.$http
         .post(this.verifyResendActionUrl, data)
-        .then(response => {
+        .then((response) => {
           if (response.data.success) {
             this.resetErrorState();
             this.apiSuccess = response.data.message;
           }
           this.form.isSubmittingResend = false;
         })
-        .catch(error => {
+        .catch((error) => {
           this.resetErrorState();
           this.apiErrors.form = error.response.data.message;
           this.form.isSubmittingResend = false;

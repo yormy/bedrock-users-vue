@@ -148,7 +148,7 @@ export default {
 
   methods: {
     gotoNext() {
-      const currentStepIndex = this.steps.findIndex(element => element === this.registerStep);
+      const currentStepIndex = this.steps.findIndex((element) => element === this.registerStep);
       if (this.steps.length > currentStepIndex + 1) {
         this.registerStep = this.steps[currentStepIndex + 1];
       } else {

@@ -30,8 +30,8 @@
 </template>
 
 <script>
-import CodeInput from '../CodeInput.vue';
 import { getFirstValidationError } from 'bedrock-vue-components';
+import CodeInput from '../CodeInput.vue';
 
 export default {
   components: {
@@ -91,7 +91,7 @@ export default {
 
       this.$http
         .post(this.registrationInviteActionUrl, data)
-        .then(response => {
+        .then((response) => {
           if (response.data.success) {
             this.inviteCodeError = '';
             this.$emit('confirmed');
@@ -99,7 +99,7 @@ export default {
 
           this.form.isSubmitting = false;
         })
-        .catch(error => {
+        .catch((error) => {
           this.apiErrors.inviteCode = error.response.data.message;
 
           const inviteCodeError = getFirstValidationError(error, 'inviteCode');

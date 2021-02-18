@@ -38,7 +38,7 @@
 
 <script>
 import VuePhoneNumberInput from 'vue-phone-number-input';
-//import 'vue-phone-number-input/dist/vue-phone-number-input.css';
+// import 'vue-phone-number-input/dist/vue-phone-number-input.css';
 import { mergeErrors } from 'bedrock-vue-components';
 
 export default {
@@ -99,13 +99,13 @@ export default {
 
       this.$http
         .post(this.registrationPhoneActionUrl, data)
-        .then(response => {
+        .then((response) => {
           if (response.data.success) {
             this.isSubmitting = false;
             this.$emit('finished', response.data.data);
           }
         })
-        .catch(error => {
+        .catch((error) => {
           this.apiErrors = mergeErrors(error);
         })
         .finally(() => {

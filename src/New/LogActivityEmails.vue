@@ -42,8 +42,7 @@
 </template>
 
 <script>
-import { Datatable } from 'bedrock-vue-components';
-import { DatatableSearch}  from 'bedrock-vue-components';
+import { Datatable, DatatableSearch } from 'bedrock-vue-components';
 
 export default {
   extends: Datatable,

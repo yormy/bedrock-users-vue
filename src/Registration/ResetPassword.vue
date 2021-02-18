@@ -91,8 +91,8 @@
 </template>
 
 <script>
-import EmailInput from './EmailInput.vue';
 import { mergeErrors } from 'bedrock-vue-components';
+import EmailInput from './EmailInput.vue';
 
 export default {
   components: {
@@ -162,7 +162,7 @@ export default {
 
       this.$http
         .post(this.resetPasswordRequestUrl, data)
-        .then(response => {
+        .then((response) => {
           if (response.data.success) {
             this.successMessage = response.data.message;
             this.confirmableAction.xid = response.data.data.confirmableActionXid;
@@ -171,7 +171,7 @@ export default {
             this.confirmableAction.description = response.data.data.description;
           }
         })
-        .catch(error => {
+        .catch((error) => {
           this.apiErrors = mergeErrors(error);
         })
         .finally(() => {
