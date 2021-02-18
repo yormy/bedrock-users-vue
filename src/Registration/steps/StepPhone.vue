@@ -38,8 +38,8 @@
 
 <script>
 import VuePhoneNumberInput from 'vue-phone-number-input';
-import 'vue-phone-number-input/dist/vue-phone-number-input.css';
-import { mergeErrors } from '../../plugins/formhelper';
+//import 'vue-phone-number-input/dist/vue-phone-number-input.css';
+import { mergeErrors } from 'bedrock-vue-components';
 
 export default {
   components: {

@@ -25,7 +25,8 @@
 </template>
 
 <script>
-import emailcheck from 'bedrock-vue-components';
+// TODO fix npm
+// import emailcheck from 'bedrock-vue-components';
 
 export default {
   props: {

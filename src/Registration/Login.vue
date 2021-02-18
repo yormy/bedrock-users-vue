@@ -162,12 +162,13 @@
 </template>
 
 <script>
-import API_RESPONSE from '@components/plugins/apiCodes';
-import CodeInput from '@components/registration/CodeInput.vue';
-import AppearingBullets from '@components/shared/AppearingBullets.vue';
+// todo npm
+import API_RESPONSE from '@components/helpers/apiCodes';
+import CodeInput from './CodeInput.vue';
+import { AppearingBullets } from 'bedrock-vue-components';
 
-import { removeTokensUser, removeTokensAdmin, storeTokens } from '../plugins/loginhelper';
-import { mergeErrors } from '../plugins/formhelper';
+import { removeTokensUser, removeTokensAdmin, storeTokens } from 'bedrock-vue-components';
+import { mergeErrors } from 'bedrock-vue-components';
 
 export default {
   components: {
