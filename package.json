@@ -66,13 +66,5 @@
     "typescript": "^4.1.5",
     "vue": "^2.6.12",
     "vue-template-compiler": "^2.6.12"
-  },
-  "babel": {
-    "presets": [
-      "@babel/preset-env"
-    ],
-    "plugins": [
-      "@babel/plugin-proposal-class-properties"
-    ]
   }
 }
