@@ -170,8 +170,7 @@ import {
   mergeErrors,
 } from 'bedrock-vue-components';
 
-// todo npm
-import API_RESPONSE from '@consts/apiCodes';
+import APICODES from '@consts/apiCodes';
 import CodeInput from './CodeInput.vue';
 
 export default {
@@ -349,7 +348,7 @@ export default {
           this.clearInput();
           this.apiErrors = mergeErrors(error);
           if (error.response.data.data) {
-            if (error.response.data.data.code === API_RESPONSE.AUTH_AUTHENTICATOR_MISSING) {
+            if (error.response.data.data.code === APICODES.AUTH_AUTHENTICATOR_MISSING) {
               if (this.showProvideCredentials) {
                 this.apiErrors = {}; // hide error on first try
               }
@@ -357,7 +356,7 @@ export default {
               this.showAuthenticatorCode();
               return;
             }
-            if (error.response.data.data.code === API_RESPONSE.AUTH_AUTHENTICATOR_INVALID) {
+            if (error.response.data.data.code === APICODES.AUTH_AUTHENTICATOR_INVALID) {
               this.resetLoadingState();
               this.showAuthenticatorCode();
               return;
