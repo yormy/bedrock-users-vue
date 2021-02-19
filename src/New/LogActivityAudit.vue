@@ -34,7 +34,8 @@
         </td>
       </template>
 
-      <template v-slot:[`item.diff`]="{ headers, item }">
+      <!-- <template v-slot:[`item.diff`]="{ headers, item }">-->
+      <template v-slot:[`item.diff`]="{ item }">
         <span v-for="(value, field) in item.diff" :key="field">
           <span v-if="'action' !== field"> {{ field }}:</span>
           <span v-html="value"></span>
