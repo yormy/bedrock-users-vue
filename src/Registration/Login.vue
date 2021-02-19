@@ -171,7 +171,7 @@ import {
 } from 'bedrock-vue-components';
 
 // todo npm
-import API_RESPONSE from '@components/helpers/apiCodes';
+import API_RESPONSE from '@consts/apiCodes';
 import CodeInput from './CodeInput.vue';
 
 export default {

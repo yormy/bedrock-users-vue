@@ -21,5 +21,6 @@ export default {
       sourcemap: true,
     },
   ],
+  external: [ '@consts/apiCodes'],
   plugins: [peerDepsExternal(), resolve(), commonjs(), typescript(), vue(), json()],
 };
