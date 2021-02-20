@@ -90,7 +90,7 @@
         <div class="d-flex justify-content-between">
           <div>
             <button-submit
-              v-if="resendPossible"
+              v-if="verifyResendActionUrl"
               btn-class="btn btn-secondary"
               :is-loading="form.isSubmittingResend"
               @clicked="resendAction"
@@ -123,12 +123,6 @@ export default {
     loginnameProp: String,
     xid: String,
 
-    resendPossible: {
-      type: Boolean,
-      required: false,
-      default: true,
-    },
-
     verifyType: {
       type: String,
       default: 'TOKEN',
@@ -147,7 +141,12 @@ export default {
     verifyTokenErrorProp: String,
 
     verifyActionUrl: String,
-    verifyResendActionUrl: String,
+
+    verifyResendActionUrl: {
+      type: String,
+      required: false,
+      default: '',
+    },
   },
 
   data() {
