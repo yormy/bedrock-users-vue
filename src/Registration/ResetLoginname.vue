@@ -66,8 +66,7 @@
 </template>
 
 <script>
-import { mergeErrors } from 'bedrock-vue-components';
-import EmailInput from './EmailInput.vue';
+import { EmailInput, mergeErrors } from 'bedrock-vue-components';
 
 export default {
   components: {
