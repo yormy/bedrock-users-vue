@@ -17,12 +17,7 @@ import Login from './Registration/Login.vue';
 import ResetLoginname from './Registration/ResetLoginname.vue';
 import ResetPassword from './Registration/ResetPassword.vue';
 
-import english from '../lang/en/_index';
-
-const translations = {
-  english
-}
-
+import translations from '../lang/translations';
 
 export {
   LogActivityEmails,
