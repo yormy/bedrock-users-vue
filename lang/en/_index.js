@@ -4,6 +4,11 @@ import label from './label.json';
 import misc from './misc.json';
 import project from './project.json';
 import status from './status.json';
+import verify from './verify.json';
+import confirm_action from './confirm_action.json';
+import user from './user.json';
+
+import registration from './registration.json';
 
 export default {
   action,
@@ -11,5 +16,9 @@ export default {
   label,
   misc,
   project,
-  status
+  status,
+  registration,
+  verify,
+  confirm_action,
+  user
 };

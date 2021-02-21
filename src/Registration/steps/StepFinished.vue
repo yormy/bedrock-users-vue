@@ -1,8 +1,8 @@
 <template>
   <div class="d-flex flex-column">
     <div>
-      <h1>Finishing your registration</h1>
-      ...nice for promotions
+      <h1>{{ $t('bedrock-users.registration.finalizing.title') }}</h1>
+      <p>{{ $t('bedrock-users.registration.finalizing.subtitle') }}</p>
     </div>
     <br />
 
@@ -13,8 +13,8 @@
 
     <div v-if="!form.isPreparing" class="mt-5">
       <button-submit :is-loading="form.isSubmitting" @clicked="goLogin">
-        Login
-        <template v-slot:loading-title>Logging in... </template>
+        {{ $t('bedrock-users.action.login') }}
+        <template v-slot:loading-title>{{ $t('bedrock-users.action.logging_in') }} </template>
       </button-submit>
     </div>
   </div>
@@ -42,19 +42,19 @@ export default {
 
       messages: [
         {
-          text: 'Validating your credentials',
+          text: this.$t('bedrock-users.registration.finalizing.appearing.message1'),
           loading: false,
           completed: false,
           processingMs: 3000,
         },
         {
-          text: 'Decrypting your data',
+          text: this.$t('bedrock-users.registration.finalizing.appearing.message2'),
           loading: false,
           completed: false,
           processingMs: 2000,
         },
         {
-          text: 'Increasing your security level',
+          text: this.$t('bedrock-users.registration.finalizing.appearing.message3'),
           loading: false,
           completed: false,
           processingMs: 1000,

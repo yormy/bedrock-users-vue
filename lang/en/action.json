@@ -8,5 +8,7 @@
   "save" : "save1",
   "update-and-next" : "update and next1",
   "search" : "search1",
-  "select" : "select"
+  "select" : "select",
+  "login" : "logins",
+  "logging_in" : "logging in..."
 }

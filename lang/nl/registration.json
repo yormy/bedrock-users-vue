@@ -1,0 +1,39 @@
+{
+  "input" : {
+    "email": {
+      "label": "Je email address"
+    },
+    "password" : {
+      "label": "Type een nieuw wachtwoord",
+      "hint": "Een moeilijk wachtwoord van minimaal 8 tekens"
+    },
+    "password_confirm" : {
+      "label": "Type je wachtwoord nog een keer",
+      "hint": "Type hetzelfde wachtwoord nog een keer"
+    },
+    "i_agree_to_above" : {
+      "label": "Ik ben akkoord met het bovenstaande",
+      "error": "Wil je nog even akkoord gaan met het bovenstaande",
+      "warning_marketing": "Je bent deze waarschijnlijk vergeten"
+    }
+  },
+
+  "terms" : {
+    "general" : "Om optimaal gebruik te maken van de mogelijkheden ga je akkoord met de algemene voorwaarden en privacy policy",
+    "marketing" : "Hou me op de hoogte van nieuwe ontwikkelingen"
+  },
+
+  "button" : {
+    "register_now" : "Registreren"
+  },
+
+  "finalizing" : {
+    "title": "Voltooien van je aanmelding",
+    "subtitle": "een momentje geduld...",
+    "appearing" : {
+      "message1" : "Controle en verificatie",
+      "message2" : "Encrypten van je gegevens",
+      "message3" : "Verhogen van het veiligheids niveau"
+    }
+  }
+}

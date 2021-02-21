@@ -1,0 +1,16 @@
+{
+  "login_credentials_changed": {
+    "title" : "Login Credentials Changed",
+    "description" : "We will log you out, please hold"
+  },
+  "action_already_confirmed" : {
+    "title" : "This action is already performed , or it has expired"
+  },
+
+  "confirm" : {
+    "fill_in_the_method_code" : "Fill in the {method} code (xxx-xxx) you received !",
+    "fill_in_loginname" : "Fill in your username and the {method} code (xxx-xxx) you received"
+  },
+
+  "sent_to" : "Sent to:"
+}

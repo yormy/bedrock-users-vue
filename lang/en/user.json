@@ -1,0 +1,6 @@
+{
+  "loginname" : {
+    "label": "login name",
+    "hint" : "the name you use to login"
+  }
+}

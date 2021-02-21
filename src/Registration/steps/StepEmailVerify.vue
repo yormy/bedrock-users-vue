@@ -1,10 +1,11 @@
 <template>
   <div class="container">
-    <h1>Verify your email addresss</h1>
+    <h1>{{ $t('bedrock-users.verify.email.title') }}</h1>
+
     <div class="card-body">
       <confirm-action
         :confirm-title="confirmableAction.title"
-        :confirm-sent-to="`Sent to ${sentToEmail}`"
+        :confirm-sent-to="sentToEmail"
         :confirm-description="confirmableAction.description"
         :method="confirmableAction.method"
         verify-type="CODE"

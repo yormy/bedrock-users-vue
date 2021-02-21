@@ -1,0 +1,16 @@
+{
+    "login_credentials_changed": {
+        "title" : "Inlog gegevens gewijzigd",
+        "description" : "We gaan je nu uitloggen voor de veiligheid"
+    },
+    "action_already_confirmed" : {
+        "title" : "Deze actie is al bevestigd, of verlopen"
+    },
+
+    "confirm" : {
+        "fill_in_the_method_code" : "Vul de {method} code (xxx-xxx) in die je hebt ontvangen",
+        "fill_in_loginname" : "Vul je gebruikersnaam in en de {method} code (xxx-xxx) die je hebt ontvangen"
+    },
+
+  "sent_to" : "Verstuurd naar:"
+}

@@ -1,7 +1,7 @@
 <template>
   <div>
     <div v-if="xid === '0' || xid === null || xid === ''">
-      <h1>{{ $t('confirm_actions.action_already_confirmed.title') }}</h1>
+      <h3>{{ $t('bedrock-users.confirm_action.action_already_confirmed.title') }}</h3>
     </div>
 
     <div v-else>
@@ -27,14 +27,14 @@
             <div v-if="needsUsername">
               <p>
                 {{
-                  $t('confirm_actions.confirm.fill_in_loginname', { method: method.toLowerCase() })
+                  $t('bedrock-users.confirm_action.confirm.fill_in_loginname', { method: method.toLowerCase() })
                 }}
               </p>
             </div>
             <div v-else>
               <p>
                 {{
-                  $t('confirm_actions.confirm.fill_in_the_method_code', {
+                  $t('bedrock-users.confirm_action.confirm.fill_in_the_method_code', {
                     method: method.toLowerCase(),
                   })
                 }}
@@ -63,8 +63,8 @@
                 <v-text-field
                   autocomplete="loginname"
                   v-model="loginname"
-                  :label="$t('misc.login.loginname.label')"
-                  :hint="$t('misc.login.loginname.hint')"
+                  :label="$t('bedrock-users.user.loginname.label')"
+                  :hint="$t('bedrock-users.user.loginname.hint')"
                   :error-messages="errors"
                   :color="!apiErrors.loginname ? 'success' : ''"
                   outlined
@@ -95,13 +95,13 @@
               :is-loading="form.isSubmittingResend"
               @clicked="resendAction"
             >
-              {{ $t('misc.confirmtoken.resend') }}
+              {{ $t('actions.resend') }}
             </button-submit>
           </div>
 
           <div>
             <button-submit :is-loading="form.isSubmittingSubmit" @clicked="confirmAction">
-              {{ $t('misc.confirmtoken.confirm') }}
+              {{ $t('actions.confirm') }}
             </button-submit>
           </div>
         </div>

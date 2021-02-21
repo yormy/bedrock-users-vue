@@ -1,0 +1,14 @@
+{
+  "id" : "id",
+  "ip_address": "IP address",
+  "loading" : "loading",
+  "autosync_html_txt" : "auto sync html to txt1",
+  "use_suggestion" : "Use suggestion1",
+  "by_user" : "by",
+  "on_date" : "on",
+  "suggestion" : " suggestion1",
+  "this_is_base_language" : "this is the base language1",
+  "review_status" : {
+    "title": "review status1"
+  }
+}

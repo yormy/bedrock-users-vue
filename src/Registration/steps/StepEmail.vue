@@ -5,17 +5,19 @@
     <ValidationObserver ref="form">
       <email-input
         ref="emailInput"
+        :label="$t('bedrock-users.registration.input.email.label')"
+        :hint="backendhint"
         :email-address.sync="registration.email"
         :api-errors="apiErrors"
-        :hint="backendhint"
       ></email-input>
 
       <ValidationProvider v-slot="{ errors }" rules="required|strong-password" name="password">
         <v-text-field
           autocomplete="password"
           v-model="registration.password"
-          :label="$t('misc.login.password.label')"
-          :hint="$t('misc.login.password.hint')"
+          :label="$t('bedrock-users.registration.input.password.label')"
+          :hint="$t('bedrock-users.registration.input.password.hint')"
+
           :append-icon="passwordExpose ? 'fal fa-eye' : 'fal fa-eye-slash'"
           @click:append="() => (passwordExpose = !passwordExpose)"
           :type="passwordExpose ? 'text' : 'password'"
@@ -35,8 +37,8 @@
       >
         <v-text-field
           v-model="registration.passwordConfirm"
-          :label="$t('misc.registration.re-enter-password')"
-          :hint="$t('misc.login.password.hint')"
+          :label="$t('bedrock-users.registration.input.password_confirm.label')"
+          :hint="$t('bedrock-users.registration.input.password_confirm.hint')"
           :append-icon="passwordConfirmExpose ? 'fal fa-eye' : 'fal fa-eye-slash'"
           @click:append="() => (passwordConfirmExpose = !passwordConfirmExpose)"
           :type="passwordConfirmExpose ? 'text' : 'password'"
@@ -49,11 +51,11 @@
 
     <ValidationProvider v-slot="{ errors }" rules="agreed" name="termsGeneral" ref="termsGeneral">
       <div>
-        {{ $t('misc.terms.statement.general') }}
+        {{ $t('bedrock-users.registration.terms.general') }}
         <v-checkbox
           v-model="registration.termsGeneral"
           class="mt-0"
-          :label="$t('misc.terms.i_agree_to_above')"
+          :label="$t('bedrock-users.registration.input.i_agree_to_above.label')"
           :error-messages="apiErrors.termsGeneral ? apiErrors.termsGeneral : errors"
         >
         </v-checkbox>
@@ -61,20 +63,17 @@
     </ValidationProvider>
 
     <ValidationProvider name="termsMarketing" rules="agreed" ref="termsMarketing">
-      {{ $t('misc.terms.statement.marketing') }}
+      {{ $t('bedrock-users.registration.terms.marketing') }}
       <div>
         <v-checkbox
           v-model="registration.termsMarketing"
           class="mt-0"
-          :label="$t('misc.terms.i_agree_to_above')"
+          :label="$t('bedrock-users.registration.input.i_agree_to_above.label')"
           :error-messages="marketing.errorMessage"
         >
           <template v-slot:label>
             <div :class="marketing.errorMessage !== '' ? 'red--text' : ''">
-              {{ $t('misc.terms.i_agree_to_above') }}
-            </div>
-            <div v-if="marketing.errorMessage" class="red--text">
-              &nbsp; == {{ marketing.errorMessage }}
+              {{ $t('bedrock-users.registration.input.i_agree_to_above.label') }}
             </div>
           </template>
         </v-checkbox>
@@ -94,7 +93,7 @@
     </div>
 
     <button-submit :is-loading="form.isSubmitting" @clicked="registerAction">
-      {{ $t('misc.registration.button_action') }}
+      {{ $t('bedrock-users.registration.button.register_now') }}
     </button-submit>
   </div>
 </template>
@@ -119,7 +118,7 @@ export default {
 
       lang: {
         error: {
-          marketing: this.$t('misc.terms.marketing_push'),
+          marketing: this.$t('bedrock-users.registration.input.i_agree_to_above.warning_marketing'),
         },
       },
 
