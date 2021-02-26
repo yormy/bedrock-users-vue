@@ -129,12 +129,12 @@ export default {
 
   data() {
     return {
-      phoneNumerUnformatted: '',
+      phoneNumerUnformatted: '612299899',
       phoneValid: false,
 
       form: {
-        phone: null,
-        password: 'Welkom1!',
+        phone: '',
+        currentPassword: 'Welkom1!',
       },
     };
   },
@@ -146,7 +146,7 @@ export default {
 
     phoneUpdated(data) {
       this.phoneValid = data.isValid;
-console.log('check phone');
+
       if (data.isValid) {
         this.form.phone = data.e164;
         this.apiErrors.form = '';
