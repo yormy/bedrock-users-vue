@@ -22,5 +22,12 @@ export default {
     },
   ],
   external: [ '@consts/apiCodes'],
-  plugins: [peerDepsExternal(), resolve(), commonjs(), typescript(), vue(), json()],
+  plugins: [
+    peerDepsExternal(),
+    resolve(),
+    commonjs(),
+    typescript(),
+    vue(),
+    json()
+  ],
 };
