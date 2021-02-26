@@ -130,7 +130,15 @@
       }
     },
     "password" : {
-      "title" : "Change your password"
+      "title" : "Change your password",
+      "new" : {
+        "label": "Your new password",
+        "hint": "Your new password"
+      },
+      "confirm" : {
+        "label": "Your new password again",
+        "hint": "re-type your new password as confirmation"
+      }
     },
 
     "phone" : {

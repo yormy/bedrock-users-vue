@@ -44,7 +44,6 @@
           </div>
 
           <div v-if="show.emailChange">
-            <h2>{{ $t('bedrock-users.profile.security.email_change.title') }}</h2>
             <secure-email-change
               :change-action-url="emailChangeUrl"
               :authenticator-enabled="authenticatorEnabled"
@@ -54,8 +53,6 @@
 
           <div v-if="loginnameChangeUrl">
             <div v-if="show.loginnameChange">
-              <h2>{{ $t('bedrock-users.profile.security.change_loginname') }}</h2>
-              {{ loginnameChangeUrl }}
               <secure-loginname-change
                 :change-action-url="loginnameChangeUrl"
                 :authenticator-enabled="authenticatorEnabled"
@@ -66,7 +63,6 @@
 
           <div v-if="loginnameChangeUrl">
             <div v-if="show.passwordChange">
-              <h2>{{ $t('bedrock-users.profile.security.change_password') }}</h2>
               <secure-password-change
                 :change-action-url="passwordChangeUrl"
                 :authenticator-enabled="authenticatorEnabled"

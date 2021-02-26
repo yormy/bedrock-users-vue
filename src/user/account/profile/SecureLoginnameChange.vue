@@ -1,17 +1,18 @@
 <template>
   <div>
     <div class="container">
-      <div v-if="!confirmableAction.xid" class="card card-table">
+      <div class="col-6">
+        <div v-if="!confirmableAction.xid" class="card card-table">
         <loading-overlay :show="form.isSubmitting"></loading-overlay>
 
         <div class="card-header">
-          <span class="fal fa-fw fa-chart-network"></span>
-          <p>{{ $t('profile.change.loginname.title') }}</p>
+          <span class="fal fa-fw fa-user"></span>
+          {{ $t('bedrock-users.profile.security.change_loginname') }}
         </div>
 
         <div class="card-body">
-          <p>{{ $t('profile.change.credentials.description_01') }}</p>
-          <p>{{ $t('profile.change.credentials.description_02') }}</p>
+          <p>{{ $t('bedrock-users.profile.change.credentials.description_01') }}</p>
+          <p>{{ $t('bedrock-users.profile.change.credentials.description_02') }}</p>
 
           <div v-if="tokenErrorMessage">
             <div class="alert alert-danger" style="overflow-wrap: break-word">
@@ -26,8 +27,8 @@
                   ref="emailInput"
                   autocomplete="email"
                   v-model="form.loginname"
-                  :label="$t('profile.change.email.new.label')"
-                  :hint="$t('profile.change.email.new.hint')"
+                  :label="$t('bedrock-users.profile.change.email.new.label')"
+                  :hint="$t('bedrock-users.profile.change.email.new.hint')"
                   :type="'email'"
                   :error-messages="apiErrors.loginname ? apiErrors.loginname : errors"
                   :color="!apiErrors.loginname && form.loginname ? 'success' : ''"
@@ -45,8 +46,7 @@
                 <v-text-field
                   autocomplete="password"
                   v-model="form.currentPassword"
-                  :label="$t('profile.change.current_password.label')"
-                  :hint="$t('misc.login.password.hint')"
+                  :label="$t('bedrock-users.profile.change.current_password.label')"
                   :append-icon="passwordConfirmExpose ? 'fal fa-eye' : 'fal fa-eye-slash'"
                   @click:append="() => (passwordExpose = !passwordExpose)"
                   :type="passwordExpose ? 'text' : 'password'"
@@ -93,14 +93,16 @@
               </div>
             </div>
 
-            <button-submit :is-loading="form.isSubmitting" @clicked="submitChangeRequest">
-              {{ $t('misc.request_change') }}
-            </button-submit>
+            <div class="float-right">
+              <button-submit :is-loading="form.isSubmitting" @clicked="submitChangeRequest">
+                {{ $t('bedrock-users.action.request_change') }}
+              </button-submit>
+            </div>
           </ValidationObserver>
         </div>
       </div>
 
-      <div v-else class="card">
+        <div v-else class="card">
         <div class="card-header"></div>
         <div class="card-body">
           <confirm-action
@@ -114,6 +116,7 @@
           >
           </confirm-action>
         </div>
+      </div>
       </div>
     </div>
   </div>

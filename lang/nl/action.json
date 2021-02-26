@@ -12,5 +12,6 @@
   "login" : "logins",
   "logging_in" : "logging in...",
   "logout" : "Uitloggen",
-  "view" : "Bekijken"
+  "view" : "Bekijken",
+  "request_change" : "Verzoek wijziging"
 }

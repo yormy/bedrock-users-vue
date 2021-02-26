@@ -118,21 +118,29 @@
       "description_02" : "Na de wijziging moet je het nog een keer bevestigen"
     },
     "loginname" : {
-      "title" : "Change your loginname",
+      "title" : "Login naam wijzigen",
       "new" : {
-        "label": "Enter your new loginname",
-        "hint": "The new loginname you will use to login"
+        "label": "Je nieuwe login naam",
+        "hint": "De naam die je wilt gaan gebruiken tijdens het inloggen"
       }
     },
     "email" : {
-      "title" : "Change your email",
+      "title" : "Email adres wijzigen",
       "new" : {
-        "label": "Enter your new email address",
-        "hint": "The new email address you want to use"
+        "label": "Je nieuwe email adres",
+        "hint": "Het email adres dat je wilt gaan gebruiken"
       }
     },
     "password" : {
-      "title" : "Change your password"
+      "title" : "Change your password",
+      "new" : {
+        "label": "Je nieuwe wachtwoord",
+        "hint": "Je nieuwe wachtwoord"
+      },
+      "confirm" : {
+        "label": "Nogmaals je nieuwe wachtwoord",
+        "hint": "Type nogmaals je nieuwe wachtwoord als bevestiging"
+      }
     },
 
     "phone" : {

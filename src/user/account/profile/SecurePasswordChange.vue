@@ -5,13 +5,13 @@
         <loading-overlay :show="form.isSubmitting"></loading-overlay>
 
         <div class="card-header">
-          <span class="fal fa-fw fa-chart-network"></span>
-          <p>{{ $t('profile.change.password.title') }}</p>
+          <span class="fal fa-fw fa-key"></span>
+          {{ $t('bedrock-users.profile.security.change_password') }}
         </div>
 
         <div class="card-body">
-          <p>{{ $t('profile.change.credentials.description_01') }}</p>
-          <p>{{ $t('profile.change.credentials.description_02') }}</p>
+          <p>{{ $t('bedrock-users.profile.change.credentials.description_01') }}</p>
+          <p>{{ $t('bedrock-users.profile.change.credentials.description_02') }}</p>
 
           <div v-if="tokenErrorMessage">
             <div class="alert alert-danger" style="overflow-wrap: break-word">
@@ -29,8 +29,8 @@
                 <v-text-field
                   autocomplete="password"
                   v-model="form.newPassword"
-                  :label="$t('misc.login.password.label')"
-                  :hint="$t('misc.login.password.hint')"
+                  :label="$t('bedrock-users.profile.change.password.new.label')"
+                  :hint="$t('bedrock-users.profile.change.password.new.hint')"
                   :append-icon="passwordNewExpose ? 'fal fa-eye' : 'fal fa-eye-slash'"
                   @click:append="() => (passwordNewExpose = !passwordNewExpose)"
                   :type="passwordNewExpose ? 'text' : 'password'"
@@ -50,8 +50,8 @@
               >
                 <v-text-field
                   v-model="form.confirmPassword"
-                  :label="$t('misc.registration.re-enter-password')"
-                  :hint="$t('misc.login.password.hint')"
+                  :label="$t('bedrock-users.profile.change.password.confirm.label')"
+                  :hint="$t('bedrock-users.profile.change.password.confirm.hint')"
                   :append-icon="passwordConfirmExpose ? 'fal fa-eye' : 'fal fa-eye-slash'"
                   @click:append="() => (passwordConfirmExpose = !passwordConfirmExpose)"
                   :type="passwordConfirmExpose ? 'text' : 'password'"
@@ -69,8 +69,7 @@
                 <v-text-field
                   autocomplete="password"
                   v-model="form.currentPassword"
-                  :label="$t('profile.change.current_password.label')"
-                  :hint="$t('misc.login.password.hint')"
+                  :label="$t('bedrock-users.profile.change.current_password.label')"
                   :append-icon="passwordCurrentExpose ? 'fal fa-eye' : 'fal fa-eye-slash'"
                   @click:append="() => (passwordCurrentExpose = !passwordCurrentExpose)"
                   :type="passwordCurrentExpose ? 'text' : 'password'"
@@ -111,9 +110,12 @@
               </div>
             </div>
 
-            <button-submit :is-loading="form.isSubmitting" @clicked="submitChangeRequest">
-              {{ $t('misc.request_change') }}
-            </button-submit>
+            <div class="float-right">
+              <button-submit :is-loading="form.isSubmitting" @clicked="submitChangeRequest">
+                {{ $t('bedrock-users.action.request_change') }}
+              </button-submit>
+            </div>
+
           </ValidationObserver>
         </div>
       </div>

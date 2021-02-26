@@ -12,5 +12,6 @@
   "login" : "logins",
   "logging_in" : "logging in...",
   "logout" : "Logout",
-  "view" : "View"
+  "view" : "View",
+  "request_change" : "Request change"
 }

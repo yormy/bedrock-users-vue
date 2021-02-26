@@ -1,7 +1,8 @@
 <template>
   <div>
     <div class="container">
-      <div v-if="!confirmableAction.xid" class="card card-table">
+      <div class="col-6">
+        <div v-if="!confirmableAction.xid" class="card card-table">
         <loading-overlay :show="form.isSubmitting"></loading-overlay>
 
         <div class="card-header">
@@ -29,9 +30,11 @@
                 :required="true"
                 @update="phoneUpdated"
                 :default-country-code="'NL'"
+                :translations="$t('bedrock-core.mazui.phone')"
               />
 
-              <ValidationProvider
+              <div class="my-3">
+                <ValidationProvider
                 v-slot="{ errors }"
                 rules="required|strong-password"
                 name="password"
@@ -45,12 +48,13 @@
                   :type="passwordExpose ? 'text' : 'password'"
                   :error-messages="apiErrors.currentPassword ? apiErrors.currentPassword : errors"
                   :color="!apiErrors.currentPassword ? 'success' : ''"
-                  @keydown="apiErrors.currentPassword = ''"
+                  @keydown="apiErrors.currentPassword = ''; phoneUpdated"
                   counter
                   outlined
                 >
                 </v-text-field>
               </ValidationProvider>
+              </div>
 
               <div v-if="emailWarning.form">
                 <div class="alert alert-warning" style="overflow-wrap: break-word">
@@ -86,14 +90,18 @@
               </div>
             </div>
 
-            <button-submit :is-loading="form.isSubmitting" @clicked="submitChangeRequest">
-              {{ $t('misc.request_change') }}
-            </button-submit>
+            <div class="float-right">
+              <button-submit :is-loading="form.isSubmitting" @clicked="submitChangeRequest" class="">
+                {{ $t('bedrock-users.action.request_change') }}
+              </button-submit>
+            </div>
+
           </ValidationObserver>
         </div>
       </div>
 
-      <div v-else class="card">
+
+        <div v-else class="card">
         <div class="card-header"></div>
         <div class="card-body">
           <confirm-action
@@ -107,6 +115,7 @@
           >
           </confirm-action>
         </div>
+      </div>
       </div>
     </div>
   </div>
@@ -137,12 +146,12 @@ export default {
 
     phoneUpdated(data) {
       this.phoneValid = data.isValid;
-
+console.log('check phone');
       if (data.isValid) {
         this.form.phone = data.e164;
         this.apiErrors.form = '';
       } else {
-        this.apiErrors.form = this.$t('misc.validations.phone.invalid');
+        this.apiErrors.form = this.$t('bedrock-core.validations.phone.invalid');
       }
     },
 
