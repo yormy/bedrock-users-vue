@@ -64,6 +64,7 @@
           <div v-if="loginnameChangeUrl">
             <div v-if="show.passwordChange">
               <secure-password-change
+                :user="user"
                 :change-action-url="passwordChangeUrl"
                 :authenticator-enabled="authenticatorEnabled"
               >
@@ -123,6 +124,10 @@ export default {
   },
 
   props: {
+    user: {
+      type: Object,
+    },
+
     firewallLogs: {
       type: Array,
     },

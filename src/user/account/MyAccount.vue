@@ -65,6 +65,7 @@
 
     <div v-if="section == 'SECURITY'">
       <my-account-security
+        :user="user"
         :whitelisted-ips="whitelistedIps"
         :whitelisted-browsers="whitelistedBrowsers"
         :authenticator-enabled="authenticatorEnabled"
