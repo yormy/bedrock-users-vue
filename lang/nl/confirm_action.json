@@ -1,7 +1,7 @@
 {
     "login_credentials_changed": {
         "title" : "Inlog gegevens gewijzigd",
-        "description" : "We gaan je nu uitloggen voor de veiligheid"
+        "description" : "Voor de veligheid moet je opnieuw inloggen met je nieuwe gegevens"
     },
     "action_already_confirmed" : {
         "title" : "Deze actie is al bevestigd, of verlopen"

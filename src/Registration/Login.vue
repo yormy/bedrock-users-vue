@@ -13,13 +13,14 @@
 
     <v-dialog v-model="reloginChangedMessage" width="500" persistent>
       <v-card>
-        <v-card-title class="headline">Login Credentials Changed</v-card-title>
+        <v-card-title class="headline">
+          {{ $t('bedrock-users.confirm_action.login_credentials_changed.title') }}
+        </v-card-title>
 
         <v-card-text>
-          <p>
-            Login information has changed, please re-login with your new credentials to continue
+          <p>{{ $t('bedrock-users.confirm_action.login_credentials_changed.description') }}
           </p>
-          <button @click="reloginChangedMessage = ''" class="btn btn-success">Login Again</button>
+          <button @click="reloginChangedMessage = ''" class="btn btn-success">{{  $t('bedrock-users.action.login')}}</button>
         </v-card-text>
       </v-card>
     </v-dialog>
