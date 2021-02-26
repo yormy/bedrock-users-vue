@@ -22,13 +22,13 @@
 
           <ValidationObserver ref="form">
             <div>
-              <ValidationProvider v-slot="{ errors }" rules="required|email|min:5" name="email">
+              <ValidationProvider v-slot="{ errors }" rules="required|min:5" name="loginname">
                 <v-text-field
-                  ref="emailInput"
-                  autocomplete="email"
+                  ref="loginnameInput"
+                  autocomplete="loginname"
                   v-model="form.loginname"
-                  :label="$t('bedrock-users.profile.change.email.new.label')"
-                  :hint="$t('bedrock-users.profile.change.email.new.hint')"
+                  :label="$t('bedrock-users.profile.change.loginname.new.label')"
+                  :hint="$t('bedrock-users.profile.change.loginname.new.hint')"
                   :type="'email'"
                   :error-messages="apiErrors.loginname ? apiErrors.loginname : errors"
                   :color="!apiErrors.loginname && form.loginname ? 'success' : ''"
