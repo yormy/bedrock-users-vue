@@ -45,6 +45,7 @@
 
           <div v-if="show.emailChange">
             <secure-email-change
+              :user="user"
               :change-action-url="emailChangeUrl"
               :authenticator-enabled="authenticatorEnabled"
             >
@@ -54,6 +55,7 @@
           <div v-if="loginnameChangeUrl">
             <div v-if="show.loginnameChange">
               <secure-loginname-change
+                :user="user"
                 :change-action-url="loginnameChangeUrl"
                 :authenticator-enabled="authenticatorEnabled"
               >
