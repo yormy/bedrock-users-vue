@@ -171,7 +171,7 @@ import {
 } from 'bedrock-vue-components';
 
 import APICODES from '@consts/apiCodes';
-import CodeInput from './CodeInput.vue';
+import { CodeInput } from 'bedrock-vue-components';
 
 export default {
   components: {

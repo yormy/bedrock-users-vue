@@ -17,6 +17,11 @@ import Login from './Registration/Login.vue';
 import ResetLoginname from './Registration/ResetLoginname.vue';
 import ResetPassword from './Registration/ResetPassword.vue';
 
+import MyAccount from './user/account/MyAccount.vue';
+import ImpersonatedWarning from './user/ImpersonatedWarning.vue';
+import AutoLogout from './user/AutoLogout.vue';
+
+
 import translations from '../lang/translations';
 
 export {
@@ -35,5 +40,8 @@ export {
   Verify,
   VerifyPassword,
   VerifyLoginname,
-  translations
+  translations,
+  MyAccount,
+  ImpersonatedWarning,
+  AutoLogout
 };

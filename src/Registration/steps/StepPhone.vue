@@ -3,7 +3,7 @@
     <h1>enter your phone</h1>
     Why we need your phone... We need your phone number to be able to verify your identity, after
     which you will be granted access to our portal
-    <vue-phone-number-input
+    <maz-phone-number-input
       v-model="phoneNumerUnformatted"
       size="lg"
       valid-color="#459B19"
@@ -37,15 +37,9 @@
 </template>
 
 <script>
-import VuePhoneNumberInput from 'vue-phone-number-input';
-// import 'vue-phone-number-input/dist/vue-phone-number-input.css';
 import { mergeErrors } from 'bedrock-vue-components';
 
 export default {
-  components: {
-    VuePhoneNumberInput,
-  },
-
   props: {
     registrationXid: String,
     registrationPhoneActionUrl: String,

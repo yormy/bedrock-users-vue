@@ -1,0 +1,33 @@
+{
+  "id": "id1",
+  "name": "name1",
+
+  "settings" : {
+    "title": "settings1",
+    "whitelist_ip": {
+      "title": "whitelist IP1",
+      "description": "only whitelisted IP addresses are able to pull and push content1"
+    }
+  },
+
+  "overview" : {
+    "title" : " Overview Translatables1",
+    "column" : {
+      "model" : "model1",
+      "total" : "total1",
+      "outdated" : "outdated1",
+      "missing" : "missing1",
+      "ok" : "oke1",
+      "new" : "new1",
+      "auto" : "auto1",
+      "busy" : "busy1",
+      "request" : "requested1",
+      "denied" : "denied1",
+      "approved" : "approved1",
+      "to_complete" : "to Complete1",
+      "to_approve" : "to Approve1",
+      "redirect_label" : "update1",
+      "completed" : "completed1"
+    }
+  }
+}
