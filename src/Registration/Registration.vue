@@ -4,6 +4,9 @@
       {{ successMessage }}
     </div>
 
+    {{continueXid}}
+    {{currentStep}}
+
     <div v-if="error" class="alert alert-danger">
       {{ error }}
     </div>
@@ -89,6 +92,11 @@ export default {
     registrationFinishingActionUrl: String,
     inviteCodeSetting: String,
     phoneMandatory: null,
+
+    currentStep : {
+      type: String,
+      required : true
+    }
   },
 
   data() {
@@ -107,6 +115,7 @@ export default {
         title: '',
         description: '',
       },
+
     };
   },
 
@@ -139,10 +148,18 @@ export default {
     this.steps.push(this.REGISTER_STEP_FINISHED);
 
     if (this.continueXid) {
-      this.registrationXid = this.continueXid;
-      this.registerStep = this.REGISTER_STEP_EMAIL_VERIFY;
-      this.successMessage = 'Email verified successfully';
-      this.gotoNext();
+
+      console.log(this.currentStep);
+      if (this.currentStep ==='EMAIL_VERIFY') {
+        this.registrationXid = this.continueXid;
+        this.registerStep = this.REGISTER_STEP_EMAIL_VERIFY;
+        this.confirmableAction.method = 'EMAIL';
+        console.log(this.registerStep);
+      }
+      //
+      //
+      // this.successMessage = 'Email verified successfully';
+      // this.gotoNext();
     }
   },
 
