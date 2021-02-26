@@ -2,5 +2,13 @@
   "loginname" : {
     "label": "login naam",
     "hint" : "De naam die je gebruikt om in te loggen"
+  },
+
+  "email" : "Email",
+  "name" : "Naam",
+  "phone" : "Telefoon",
+  "timezone" : {
+    "title": "Tijdzone",
+    "hint": "Tijdzone voor het laten zien van de juiste tijden"
   }
 }

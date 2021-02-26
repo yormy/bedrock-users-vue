@@ -1,6 +1,7 @@
 {
   "id" : "id",
   "ip_address": "IP address",
+  "ip": "IP",
   "loading" : "loading",
   "autosync_html_txt" : "auto sync html to txt1",
   "use_suggestion" : "Use suggestion1",

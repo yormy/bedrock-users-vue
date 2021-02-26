@@ -1,0 +1,148 @@
+{
+  "tabs": {
+    "details" : {
+      "title" : "Details",
+      "description" : "Account and profile"
+    },
+    "activity" : {
+      "title" : "Activity",
+      "description" : "Emails, Activity, Audit"
+    },
+    "security" : {
+      "title" : "Security",
+      "description" : "Settings, Firewall"
+    }
+  },
+  "no-available-statistics" : "no available statistics",
+
+  "current_emailaddress" : "your current email address",
+  "account" : "Account",
+  "statistics" : "Statistics",
+  "emails" : "Emails",
+  "sessions" : "Sessions",
+
+  "session" : {
+    "title" : "Current active sessions",
+    "delete_other_sessions" : "Logout others",
+    "user_agent" : "user agent",
+    "last_activity" : "last activity",
+    "current" : "current"
+  },
+
+  "email" : {
+    "title" : "Sent emails",
+    "recipient" : "Recipient",
+    "subject" : "Subject",
+    "opens" : "Opens",
+    "clicks" : "Clicks",
+    "sent_at" : "Sent"
+  },
+
+  "credentials" : "credentials",
+  "protection" : "protection",
+  "security": {
+    "select" : {
+      "title" : "Select your security level",
+      "whitelisting" : {
+        "title": "Enable IP Whitelisting",
+        "description": "Only allow access to your account from pre selected ip addresses"
+      },
+      "authenticator" : {
+        "title": "Enable authenticator",
+        "description": "Install the authenticator on your phone and only access your account with the code from your phone"
+      }
+    },
+
+    "authenticator" : {
+      "enable": {
+        "title" : "enable authenticator",
+        "step_1" : "Step 1: Download the authenticator on your phone",
+        "step_2" : "Step 2: Click PLUS on your authenticator app and scan this QR Code",
+        "step_3" : "Step 3: Enter the code from your authenticator here:"
+      }
+    },
+
+    "whitelisting" : {
+      "title" : "Ip Whitelisitng",
+      "enable" : {
+
+      }
+    },
+
+
+
+
+    "whitelisting_enabled" : "whitelisting is enabled",
+    "whitelisting_disabled" : "whitelisting is disabled111",
+    "authenticator_enabled" : "authenticator is enabled",
+    "authenticator_disabled" : "authenticator is disabled",
+    "disable_authenticator" : "disable authenticator",
+
+    "email_change" : {
+      "title" : "change your email address"
+    },
+    "phone_change" : {
+      "title" : "change your phone number"
+    },
+
+    "change_loginname" : "change your loginname",
+    "change_password": "change your password"
+  },
+  "impersonated" : "impersonated",
+  "impersonated_leave" : "leave now",
+  "user_details" : "user_details",
+
+  "reset" : {
+    "loginname": {
+      "title": " Reset your login name",
+      "button" : "reset now",
+      "reconfirmation" : {
+        "title" : "Enter your NEW loginname again to confirm"
+      }
+    },
+
+    "password": {
+      "title": " Reset your password",
+      "button" : "reset now",
+      "reconfirmation" : {
+        "title" : "Enter your NEW password again to confirm"
+      }
+    }
+  },
+
+  "change" : {
+    "credentials" : {
+      "description_01" : "This is part of the security, to protect your account we need to reverify that you are you",
+      "description_02" : "We want to protect your from people stealing your account"
+    },
+    "loginname" : {
+      "title" : "Change your loginname",
+      "new" : {
+        "label": "Enter your new loginname",
+        "hint": "The new loginname you will use to login"
+      }
+    },
+    "email" : {
+      "title" : "Change your email",
+      "new" : {
+        "label": "Enter your new email address",
+        "hint": "The new email address you want to use"
+      }
+    },
+    "password" : {
+      "title" : "Change your password"
+    },
+
+    "phone" : {
+      "title" : "Change your phone",
+      "new" : {
+        "label": "Enter your new phone number",
+        "hint": "The new phone numberyou want to use"
+      }
+    },
+
+    "current_password": {
+      "label" : "Your current password"
+    }
+  }
+}

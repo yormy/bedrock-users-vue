@@ -1,0 +1,95 @@
+{
+  "textversion" : {
+    "currentbase" : "Current source to translate",
+    "previousbase" : "Previous source",
+    "differencebase" : "Changes"
+  },
+
+  "textstatus": {
+    "select": {
+      "all": "all2",
+      "new": "new",
+      "auto": "auto",
+      "busy": "busy",
+      "request": "request",
+      "denied": "denied",
+      "approved": "approved",
+      "missing": "missing",
+      "old": "old",
+      "ok": "ok"
+    },
+    "status" : {
+      "TRANSLATION_STATUS_TEXT_OK" : {
+        "text" : "translation up to date1"
+      },
+      "TRANSLATION_STATUS_TEXT_MISSING" : {
+        "text" : "text missing"
+      },
+      "TRANSLATION_STATUS_TEXT_OUTDATED" : {
+        "text" : "text outdated"
+      },
+      "TRANSLATION_STATUS_TEXT_BASE_LANG" : {
+        "text" : "is base language"
+      }
+    }
+  },
+  "reviewstatus": {
+    "title" : "review status",
+    "select" : {
+      "all" : "all3",
+      "new" : "new",
+      "auto" : "auto",
+      "busy" : "busy",
+      "request" : "request",
+      "denied" : "denied",
+      "approved" : "approved"
+    },
+    "status" : {
+      "TRANSLATION_STATUS_REVIEW_AUTO" : {
+        "text" : "auto1"
+      },
+      "TRANSLATION_STATUS_REVIEW_BUSY" : {
+        "text" : "busy"
+      },
+      "TRANSLATION_STATUS_REVIEW_NEW" : {
+        "text" : "new"
+      },
+      "TRANSLATION_STATUS_REVIEW_APPROVED" : {
+        "text" : "approved"
+      },
+      "TRANSLATION_STATUS_REVIEW_DENIED" : {
+        "text" : "denied"
+      },
+      "TRANSLATION_STATUS_REVIEW_REQUEST" : {
+        "text" : "request"
+      }
+    }
+  },
+
+  "combined": {
+    "status" : {
+      "TRANSLATION_STATUS_COMBINED_NEW" : {
+        "text" : "cmb-new"
+      },
+      "TRANSLATION_STATUS_COMBINED_MISSING" : {
+        "text" : "cmb-missing"
+      },
+      "TRANSLATION_STATUS_COMBINED_OUTDATED" : {
+        "text" : "cmb-outdated"
+      },
+      "TRANSLATION_STATUS_COMBINED_DONE" : {
+        "text" : "cmb-done"
+      },
+      "TRANSLATION_STATUS_COMBINED_BUSY" : {
+        "text" : "cmb-busy"
+      },
+      "TRANSLATION_STATUS_COMBINED_DENIED" : {
+        "text" : "cmb-denied"
+      },
+      "TRANSLATION_STATUS_COMBINED_UNDER_REVIEW" : {
+        "text" : "cmb-under review"
+      }
+
+    }
+  }
+}
