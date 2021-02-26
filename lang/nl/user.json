@@ -7,6 +7,7 @@
   "email" : "Email",
   "name" : "Naam",
   "phone" : "Telefoon",
+  "password" : "Wachtwoord",
   "timezone" : {
     "title": "Tijdzone",
     "hint": "Tijdzone voor het laten zien van de juiste tijden"

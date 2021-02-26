@@ -25,6 +25,10 @@
           :user="user"
           :timezones="timezones"
           :update-account-url="updateAccountUrl"
+          :loginname-change-url="loginnameChangeUrl"
+          :password-change-url="passwordChangeUrl"
+          :phone-change-url="phoneChangeUrl"
+          :email-change-url="emailChangeUrl"
         ></my-account-profile-details>
       </v-tab-item>
 
@@ -70,6 +74,31 @@ export default {
     updateAccountUrl: {
       type: String,
       required: true,
+    },
+
+    loginnameChangeUrl: {
+      type: String,
+      required: true,
+    },
+
+    passwordChangeUrl: {
+      type: String,
+      required: true,
+    },
+
+    phoneChangeUrl: {
+      type: String,
+      required: true,
+    },
+
+    emailChangeUrl: {
+      type: String,
+      required: true,
+    },
+
+    authenticatorEnabled: {
+      type: Boolean,
+      required: false,
     },
   },
 

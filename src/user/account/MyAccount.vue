@@ -46,6 +46,11 @@
         :user="user"
         :timezones="timezones"
         :update-account-url="updateAccountUrl"
+        :loginname-change-url="loginnameChangeUrl"
+        :password-change-url="passwordChangeUrl"
+        :phone-change-url="phoneChangeUrl"
+        :email-change-url="emailChangeUrl"
+        :authenticator-enabled="authenticatorEnabled"
       ></my-account-profile>
 
       <!--        :user="user" :permissions="permissions" :statistics="statistics"-->
@@ -207,7 +212,7 @@ export default {
 
   data() {
     return {
-      section: 'SECURITY',
+      section: 'PROFILE',
     };
   },
 

@@ -7,6 +7,7 @@
   "email" : "Email",
   "name" : "Name",
   "phone" : "Phone",
+  "password" : "Password",
   "timezone" : {
     "title": "Timezone",
     "hint": "Timezone for displaying the correct times"

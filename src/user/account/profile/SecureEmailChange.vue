@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="container">
-      <div class="col-6">
+      <div class="">
         <div v-if="!confirmableAction.xid" class="card card-table">
           <loading-overlay :show="form.isSubmitting"></loading-overlay>
 
