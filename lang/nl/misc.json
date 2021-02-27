@@ -19,6 +19,17 @@
     "authenticator_code" : {
       "label" : "Type de code van de authenticator"
     }
+  },
+
+  "title" : "Titel",
+  "subject" : "Onderwerp",
+  "summary" : "Samenvatting",
+  "sent_at" : "Verstuurd op",
+
+  "notification" : {
+    "mark_as_unread" : "Markeer ongelezen",
+    "mark_as_read" : "Markeer gelezen",
+    "mark_all_read" : "Markeer alles gelezen"
   }
 
 }

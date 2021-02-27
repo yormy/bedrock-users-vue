@@ -18,6 +18,8 @@ import ResetLoginname from './Registration/ResetLoginname.vue';
 import ResetPassword from './Registration/ResetPassword.vue';
 
 import MyAccount from './user/account/MyAccount.vue';
+import MyNotifications from './user/account/MyNotifications.vue';
+import MyNotificationSettings from './user/account/MyNotificationSettings.vue';
 import ImpersonatedWarning from './user/ImpersonatedWarning.vue';
 import AutoLogout from './user/AutoLogout.vue';
 
@@ -42,6 +44,8 @@ export {
   VerifyLoginname,
   translations,
   MyAccount,
+  MyNotifications,
+  MyNotificationSettings,
   ImpersonatedWarning,
   AutoLogout
 };

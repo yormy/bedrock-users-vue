@@ -11,7 +11,7 @@
             <v-spacer></v-spacer>
             <v-col cols="4">
               <button type="button" class="btn btn-secondary" @click="markAllAsRead">
-                {{ $t('misc.profile.notifications.list.mark_all_as_read') }}
+                {{ $t('bedrock-users.misc.notification.mark_all_read') }}
               </button>
             </v-col>
           </v-row>
@@ -58,7 +58,7 @@
                 <br />
                 <div class="text-right">
                   <button type="button" class="btn btn-sm btn-link" @click="markAsUnread(item)">
-                    {{ $t('misc.profile.notifications.list.mark_as_unread') }}
+                    {{ $t('bedrock-users.misc.notification.mark_as_unread') }}
                   </button>
                 </div>
               </div>
@@ -71,8 +71,7 @@
 </template>
 
 <script>
-import BaseList from '@components/vendor/mexion/multilingual-admin/base/BaseList.vue';
-import ListSearchComponent from '@components/vendor/mexion/multilingual-admin/base/ListSearchComponent.vue';
+import { BaseList, ListSearchComponent} from 'bedrock-vue-components';
 
 export default {
   extends: BaseList,
@@ -103,9 +102,9 @@ export default {
     },
 
     setStateAllRead() {
-      this.filteredList.forEach((item, index) => {
-        this.filteredList[index].is_read = true;
-      });
+      // this.filteredList.forEach((item, index) => {
+      //   this.filteredList[index].is_read = true;
+      // });
     },
 
     markAsRead(item) {
@@ -159,15 +158,15 @@ export default {
           value: 'is_read',
         },
         {
-          text: this.$t('misc.profile.notifications.list.title'),
+          text: this.$t('bedrock-users.misc.subject'),
           value: 'subject',
         },
         {
-          text: this.$t('misc.profile.notifications.list.summary'),
+          text: this.$t('bedrock-users.misc.summary'),
           value: 'summary',
         },
         {
-          text: this.$t('misc.profile.notifications.list.sent_at'),
+          text: this.$t('bedrock-users.misc.sent_at'),
           value: 'created_at',
         },
         {
