@@ -15,7 +15,8 @@
         {{ user.email }}
       </v-col>
       <v-col>
-        {{ user.timezone }}
+        <div v-if="authenticatorEnabled"> {{ $t('bedrock-users.profile.security.authenticator_enabled') }} </div>
+        <div v-else> {{ $t('bedrock-users.profile.security.whitelisting_enabled') }}</div>
       </v-col>
     </v-row>
   </div>
@@ -27,8 +28,14 @@ export default {
     title: {
       type: String,
     },
+
     user: {
       type: Object,
+      required: true,
+    },
+
+    authenticatorEnabled: {
+      type: Boolean,
       required: true,
     },
   },

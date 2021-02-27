@@ -21,22 +21,13 @@
                 <google-authenticator-disable-form
                   :confirm-url="authenticatorDisableUrl"
                   @whitelisting-form-cancel="hideWitelistingEnableForm"
-                  @whitelisting-enabled-successfully="setWhitelistingActive"
+                  @whitelisting-enabled-successfully="whitelistingEnabledSuccess"
                 ></google-authenticator-disable-form>
               </div>
             </div>
           </div>
 
           <div class="">
-            <!--                  <vs-switch-->
-            <!--                    color="success"-->
-            <!--                    v-model="whitelistingEnabled"-->
-            <!--                    icon-pack="feather"-->
-            <!--                    vs-icon="icon-check"-->
-            <!--                    :class="{ offWarning: !whitelistingEnabled }"-->
-            <!--                    @click="enableWhitelisting"-->
-            <!--                  />-->
-
             <div @click="enableWhitelisting">
               <v-switch
                 v-model="whitelistingEnabled"
@@ -205,10 +196,12 @@ export default {
     authenticatorEnabledSuccessfully() {
       this.hideAuthenticationEnableForm();
       this.setAuthenticatorActive();
+      window.location.reload();
     },
 
     whitelistingEnabledSuccess() {
       this.setWhitelistingActive();
+      window.location.reload();
     },
 
     enableAuthenticator() {
@@ -228,6 +221,7 @@ export default {
       this.whitelistingEnabled = false;
       this.authenticatorEnabled = true;
     },
+
     setWhitelistingActive() {
       this.whitelistingEnabled = true;
       this.authenticatorEnabled = false;

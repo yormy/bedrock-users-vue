@@ -72,10 +72,10 @@
 
 
 
-    "whitelisting_enabled" : "whitelisting is enabled",
-    "whitelisting_disabled" : "whitelisting is disabled111",
-    "authenticator_enabled" : "authenticator is enabled",
-    "authenticator_disabled" : "authenticator is disabled",
+    "whitelisting_enabled" : "IP Whitelisting is enabled",
+    "whitelisting_disabled" : "IW Whitelisting is disabled111",
+    "authenticator_enabled" : "Authenticator is enabled",
+    "authenticator_disabled" : "Authenticator is disabled",
     "disable_authenticator" : "disable authenticator",
 
     "email_change" : {
@@ -90,7 +90,7 @@
   },
   "impersonated" : "impersonated",
   "impersonated_leave" : "leave now",
-  "user_details" : "user_details",
+  "user_details" : "User details",
 
   "reset" : {
     "loginname": {

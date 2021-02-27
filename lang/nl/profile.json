@@ -74,9 +74,9 @@
 
 
 
-    "whitelisting_enabled" : "whitelisting is enabled",
+    "whitelisting_enabled" : "IP Whitelisting staat aan",
     "whitelisting_disabled" : "whitelisting is disabled111",
-    "authenticator_enabled" : "authenticator is enabled",
+    "authenticator_enabled" : "Authenticator staat an",
     "authenticator_disabled" : "authenticator is disabled",
     "disable_authenticator" : "disable authenticator",
 
@@ -92,7 +92,7 @@
   },
   "impersonated" : "impersonated",
   "impersonated_leave" : "leave now",
-  "user_details" : "user_details",
+  "user_details" : "Gegevens gebruiker",
 
   "reset" : {
     "loginname": {

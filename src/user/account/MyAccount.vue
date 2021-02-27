@@ -1,11 +1,11 @@
 <template>
   <div>
     <div class="card-header">
-      {{ $t('profile.user_details') | capitalizeFirst }}
+      {{ $t('bedrock-users.profile.user_details') }}
     </div>
     <v-row>
       <v-col>
-        <my-account-overview :user="user"></my-account-overview>
+        <my-account-overview :user="user" :authenticator-enabled="authenticatorEnabled"></my-account-overview>
       </v-col>
     </v-row>
     <v-row>

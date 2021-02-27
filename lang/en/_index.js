@@ -8,6 +8,7 @@ import verify from './verify.json';
 import confirm_action from './confirm_action.json';
 import user from './user.json';
 import profile from './profile.json';
+import validations from './validations.json';
 
 import registration from './registration.json';
 
@@ -22,5 +23,6 @@ export default {
   verify,
   confirm_action,
   user,
-  profile
+  profile,
+  validations
 };
