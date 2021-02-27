@@ -106,6 +106,7 @@
           <confirm-action
             :confirm-title="confirmableAction.title"
             :confirm-description="confirmableAction.description"
+            :confirm-sent-to="form.phone"
             :method="confirmableAction.method"
             verify-type="CODE"
             :verify-action-url="route('api.v1.guest.verify')"

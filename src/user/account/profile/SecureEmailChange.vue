@@ -109,7 +109,7 @@
             <confirm-action
               :confirm-title="confirmableAction.title"
               :confirm-description="confirmableAction.description"
-              :confirm-sent-to="user.email"
+              :confirm-sent-to="form.email"
               :method="confirmableAction.method"
               verify-type="CODE"
               :verify-action-url="route('api.v1.guest.verify')"
