@@ -1,13 +1,21 @@
 <template>
   <div>
-    <div class="vx-col w-full lg:w-1/2 xl:w-1/2">
-      <div class="vx-card overflow-hidden mb-base">
-        <h1><span class="fal fa-lock"></span>{{ $t('profile.security.select.title') }}</h1>
 
-        <div class="d-flex justify-content-between">
+    <div class="card">
+      <div class="card-header">
+        <v-col cols="6">
+          <span class="fal fa-lock"></span> {{ $t('bedrock-users.profile.security.select.title') }}
+        </v-col>
+      </div>
+
+      <div class="card-body">
+<!--    <div class="vx-col w-full lg:w-1/2 xl:w-1/2">-->
+<!--      <div class="vx-card overflow-hidden mb-base">-->
+
+        <div class="d-flex justify-content-between my-3">
           <div>
-            <h2 class="mb-1 font-bold">{{ $t('profile.security.select.whitelisting.title') }}</h2>
-            <span>{{ $t('profile.security.select.whitelisting.description') }}</span>
+            <h2 class="mb-1 font-bold">{{ $t('bedrock-users.profile.security.select.whitelisting.title') }}</h2>
+            <span>{{ $t('bedrock-users.profile.security.select.whitelisting.description') }}</span>
             <div id="'ipwhitelisting-activation-section" v-if="showWhitelistingEnable">
               <div class="mt-4">
                 <google-authenticator-disable-form
@@ -40,16 +48,16 @@
           </div>
         </div>
 
-        <div class="d-flex justify-content-between">
+        <div class="d-flex justify-content-between my-3">
           <div>
-            <h2 class="mb-1 font-bold">{{ $t('profile.security.select.authenticator.title') }}</h2>
-            <span>{{ $t('profile.security.select.authenticator.description') }}</span>
+            <h2 class="mb-1 font-bold">{{ $t('bedrock-users.profile.security.select.authenticator.title') }}</h2>
+            <span>{{ $t('bedrock-users.profile.security.select.authenticator.description') }}</span>
             {{ showAuthenticatorEnable }}
             <div id="authenticator-activation-section" v-if="showAuthenticatorEnable">
               <!--            @include('security::google2fa.enable')-->
 
-              <div>
-                <strong>{{ $t('profile.security.select.authenticator.enable.step_1') }}</strong>
+              <div class="my-3">
+                <strong>{{ $t('bedrock-users.profile.security.authenticator.enable.step_1') }}</strong>
                 <div>
                   <a
                     href="'https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2'"
@@ -76,7 +84,7 @@
                   </a>
                 </div>
                 <br />
-                <strong>{{ $t('profile.security.authenticator.enable.step_2') }}</strong>
+                <strong>{{ $t('bedrock-users.profile.security.authenticator.enable.step_2') }}</strong>
               </div>
               <div>
                 <google-authenticator-qr
@@ -85,7 +93,7 @@
                 ></google-authenticator-qr>
               </div>
 
-              <strong>{{ $t('profile.security.authenticator.enable.step_3') }}</strong>
+              <strong>{{ $t('bedrock-users.profile.security.authenticator.enable.step_3') }}</strong>
               <google-authenticator-form
                 v-if="qrLoaded"
                 :confirm-code-url="authenticatorEnableUrl"
@@ -106,7 +114,10 @@
             </div>
           </div>
         </div>
-      </div>
+<!--      </div>-->
+<!--    </div>-->
+    </div>
+
     </div>
   </div>
 </template>

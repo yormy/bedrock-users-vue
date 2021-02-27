@@ -132,6 +132,12 @@ export default {
   props: {
     user: {
       type: Object,
+      required: true,
+    },
+
+    authenticatorEnabled: {
+      type: Boolean,
+      required: true,
     },
   },
 

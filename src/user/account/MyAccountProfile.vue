@@ -29,6 +29,7 @@
           :password-change-url="passwordChangeUrl"
           :phone-change-url="phoneChangeUrl"
           :email-change-url="emailChangeUrl"
+          :authenticator-enabled="authenticatorEnabled"
         ></my-account-profile-details>
       </v-tab-item>
 
@@ -98,7 +99,7 @@ export default {
 
     authenticatorEnabled: {
       type: Boolean,
-      required: false,
+      required: true,
     },
   },
 

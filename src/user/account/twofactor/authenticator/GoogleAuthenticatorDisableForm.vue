@@ -2,7 +2,7 @@
   <div>
     <div id="authenticator-deactivation-section-form">
       <div>
-        <div class="mt-4 col-12">
+        <div class="col-12 mt-3">
           <ValidationObserver ref="form">
             <ValidationProvider rules="required|strong-password" name="password">
               <v-text-field
@@ -33,7 +33,7 @@
           </div>
         </div>
 
-        <div class="flex justify-between mt-4">
+        <div class="d-flex justify-content-between">
           <button
             id="ipwhitelisting-cancel-button"
             class="vs-component vs-button vs-button-primary vs-button-border"

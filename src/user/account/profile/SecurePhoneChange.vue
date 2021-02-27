@@ -127,6 +127,18 @@ import { SecureChange } from 'bedrock-vue-components';
 export default {
   extends: SecureChange,
 
+  props: {
+    user: {
+      type: Object,
+      required: true,
+    },
+
+    authenticatorEnabled: {
+      type: Boolean,
+      required: true,
+    },
+  },
+
   data() {
     return {
       phoneNumerUnformatted: '612299899',

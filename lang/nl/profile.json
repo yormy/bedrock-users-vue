@@ -44,28 +44,28 @@
   "protection" : "Beveiliging",
   "security": {
     "select" : {
-      "title" : "Select your security level",
+      "title" : "Selecteer je beveiligings methode",
       "whitelisting" : {
-        "title": "Enable IP Whitelisting",
-        "description": "Only allow access to your account from pre selected ip addresses"
+        "title": "IP Whitelisting gebruiken",
+        "description": "Alleen toegang dmvooraf goedgekeurd IP addressen"
       },
       "authenticator" : {
-        "title": "Enable authenticator",
-        "description": "Install the authenticator on your phone and only access your account with the code from your phone"
+        "title": "Authenticator gebruiken",
+        "description": "Installeer de authenticator app op je telefoon en toegang alleen met de code van je telefoon"
       }
     },
 
     "authenticator" : {
       "enable": {
-        "title" : "enable authenticator",
-        "step_1" : "Step 1: Download the authenticator on your phone",
-        "step_2" : "Step 2: Click PLUS on your authenticator app and scan this QR Code",
-        "step_3" : "Step 3: Enter the code from your authenticator here:"
+        "title" : "Authenticator aan zetten",
+        "step_1" : "Stap 1: Download de authenticator op je telefoon",
+        "step_2" : "Stap 2: Klik PLUS op de authenticator app en scan deze QR Code",
+        "step_3" : "Stap 3: Type de code van je authenticator hieronder"
       }
     },
 
     "whitelisting" : {
-      "title" : "Ip Whitelisitng",
+      "title" : "Whitelisted IP",
       "enable" : {
 
       }

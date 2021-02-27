@@ -3,7 +3,7 @@
     <v-card-title>
       <v-row>
         <v-col>
-          {{ $t('misc.browsers') | capitalizeFirst }}
+          {{ $t('bedrock-users.profile.security.browser.title')}}
         </v-col>
         <v-col>
           <div v-if="form.state.isSubmitting" class="text-right">
@@ -94,15 +94,15 @@ export default {
     createHeaders() {
       this.headers = [
         {
-          text: this.$t('misc.user_agent'),
+          text: this.$t('bedrock-users.misc.user_agent'),
           value: 'user_agent',
         },
         {
-          text: this.$t('misc.created_at_humans'),
+          text: this.$t('bedrock-users.misc.created_at'),
           value: 'created_at_humans',
         },
         {
-          text: this.$t('misc.actions'),
+          text: '',
           value: 'actions',
           sortable: false,
         },

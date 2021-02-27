@@ -11,5 +11,14 @@
   "this_is_base_language" : "this is the base language1",
   "review_status" : {
     "title": "review status1"
+  },
+  "created_at": "Aangemaakt op",
+  "user_agent" : "User agent",
+
+  "login" : {
+    "authenticator_code" : {
+      "label" : "Type de code van de authenticator"
+    }
   }
+
 }

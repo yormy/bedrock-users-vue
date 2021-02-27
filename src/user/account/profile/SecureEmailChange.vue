@@ -67,7 +67,7 @@
               </div>
 
               <div v-show="authenticatorEnabled">
-                {{ $t('misc.login.authenticator_code.label') }}
+                {{ $t('bedrock-users.misc.login.authenticator_code.label') }}
                 <CodeInput
                   :loading="formConfirmCode.isSubmitting"
                   :invalid-input="confirmCodeInvalid"
@@ -133,6 +133,10 @@ export default {
   props: {
     user: {
       type: Object,
+    },
+    authenticatorEnabled: {
+      type: Boolean,
+      required: false,
     },
   },
 

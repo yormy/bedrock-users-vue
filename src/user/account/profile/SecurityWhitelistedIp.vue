@@ -3,7 +3,7 @@
     <v-card-title>
       <v-row>
         <v-col>
-          {{ $t('misc.ip-addresses') | capitalizeFirst }}
+          {{ $t('bedrock-users.profile.security.whitelisting.title')}}
         </v-col>
         <v-col>
           <div v-if="form.state.isSubmitting" class="text-right">
@@ -28,17 +28,14 @@
       item-key="xid"
       single-select
       class="elevation-1"
-      show-expand
     >
-      <template v-slot:expanded-item="{ headers, item }">
-        <td :colspan="headers.length">{{ item }} <br /></td>
-      </template>
 
       <template v-slot:[`item.actions`]="{ item }">
         <button-delete :item="item" @deleteItem="deleteAgreed(item)">
           <template v-slot:delete-preview>{{ item.ip_address }}</template>
         </button-delete>
       </template>
+
     </v-data-table>
   </v-card>
 </template>
@@ -94,15 +91,15 @@ export default {
     createHeaders() {
       this.headers = [
         {
-          text: this.$t('misc.ip-address'),
+          text: this.$t('bedrock-users.misc.ip'),
           value: 'ip_address',
         },
         {
-          text: this.$t('misc.created_at_humans'),
+          text: this.$t('bedrock-users.misc.created_at'),
           value: 'created_at_humans',
         },
         {
-          text: this.$t('misc.actions'),
+          text: '',
           value: 'actions',
           sortable: false,
         },

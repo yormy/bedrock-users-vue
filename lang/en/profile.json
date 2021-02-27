@@ -63,12 +63,12 @@
     },
 
     "whitelisting" : {
-      "title" : "Ip Whitelisitng",
-      "enable" : {
-
-      }
+      "title" : "Whitelisted IP"
     },
 
+    "browser" : {
+      "title" : "Whitelisted browsers"
+    },
 
 
 

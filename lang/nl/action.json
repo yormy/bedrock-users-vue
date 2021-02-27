@@ -2,7 +2,7 @@
   "ok": "ok1",
   "delete": "delete1",
   "add" : "add1",
-  "cancel" : "cancel1",
+  "cancel" : "Annuleren",
   "update" : "----",
   "activate" : "activate1",
   "save" : "opslaan",
@@ -13,5 +13,6 @@
   "logging_in" : "logging in...",
   "logout" : "Uitloggen",
   "view" : "Bekijken",
-  "request_change" : "Verzoek wijziging"
+  "request_change" : "Verzoek wijziging",
+  "confirm": "Bevestigen"
 }

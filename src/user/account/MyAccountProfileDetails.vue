@@ -166,7 +166,7 @@ export default {
 
     authenticatorEnabled: {
       type: Boolean,
-      required: false,
+      required: true,
     },
   },
 

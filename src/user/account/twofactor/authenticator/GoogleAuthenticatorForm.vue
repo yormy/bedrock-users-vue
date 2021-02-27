@@ -32,10 +32,10 @@
           <div class="col-6">
             <button
               id="authenticator-cancel-button"
-              class="btn btn-danger"
+              class="btn btn-link"
               @click="cancelAuthenticator"
             >
-              {{ cancelBtnLabel }}
+              {{ $t('bedrock-users.action.cancel') }}
             </button>
           </div>
 
@@ -45,7 +45,7 @@
               :disabled="confirmCodeInvalid"
               @clicked="validateCode"
             >
-              {{ confirmBtnLabel }}
+              {{ $t('bedrock-users.action.confirm') }}
             </button-submit>
           </div>
         </div>
@@ -81,17 +81,9 @@ export default {
   },
 
   props: {
-    confirmBtnLabel: {
-      type: String,
-      default: 'Confirm',
-    },
     confirmCodeUrl: {
       type: String,
       required: true,
-    },
-    cancelBtnLabel: {
-      type: String,
-      default: 'Cancel',
     },
   },
 

@@ -2,7 +2,7 @@
   "ok": "ok1",
   "delete": "delete1",
   "add" : "add1",
-  "cancel" : "cancel1",
+  "cancel" : "Cancel",
   "update" : "----",
   "activate" : "activate1",
   "save" : "save1",
@@ -13,5 +13,6 @@
   "logging_in" : "logging in...",
   "logout" : "Logout",
   "view" : "View",
-  "request_change" : "Request change"
+  "request_change" : "Request change",
+  "confirm": "Confirm"
 }
