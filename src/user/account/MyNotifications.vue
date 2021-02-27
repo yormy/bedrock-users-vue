@@ -10,21 +10,13 @@
             </v-col>
             <v-spacer></v-spacer>
             <v-col cols="4">
-              <button type="button" class="btn btn-secondary" @click="markAllAsRead">
+              <button type="button" class="btn btn-secondary float-right" @click="markAllAsRead">
                 {{ $t('bedrock-users.misc.notification.mark_all_read') }}
               </button>
             </v-col>
           </v-row>
-
-          <button
-            type="submit"
-            class="btn btn--secondary--outline"
-            v-if="canAdd()"
-            @click="addItem"
-          >
-            +
-          </button>
         </v-card-title>
+
         <v-data-table
           :headers="headers"
           :items="data"
@@ -102,9 +94,9 @@ export default {
     },
 
     setStateAllRead() {
-      // this.filteredList.forEach((item, index) => {
-      //   this.filteredList[index].is_read = true;
-      // });
+      this.filteredList.forEach((item, index) => {
+        this.filteredList[index].is_read = true;
+      });
     },
 
     markAsRead(item) {

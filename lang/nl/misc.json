@@ -29,7 +29,15 @@
   "notification" : {
     "mark_as_unread" : "Markeer ongelezen",
     "mark_as_read" : "Markeer gelezen",
-    "mark_all_read" : "Markeer alles gelezen"
-  }
+    "mark_all_read" : "Markeer alles gelezen",
+    "subscription" : {
+      "title": "Meldingen",
+      "email": "Email",
+      "slack": "Slack",
+      "sms": "Sms"
+    }
+  },
+
+  "email_suppressed" : "Uitgeschreven"
 
 }

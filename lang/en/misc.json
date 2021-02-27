@@ -29,6 +29,14 @@
   "notification" : {
     "mark_as_unread" : "Mark as unread",
     "mark_as_read" : "Mark as read",
-    "mark_all_read" : "Mark all read"
-  }
+    "mark_all_read" : "Mark all read",
+    "subscription" : {
+      "title": "Notification Subscriptions",
+      "email": "Email",
+      "slack": "Slack",
+      "sms": "Sms"
+      }
+    },
+
+  "email_suppressed" : "Unsubscribed"
 }

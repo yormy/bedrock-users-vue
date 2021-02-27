@@ -20,10 +20,16 @@
       class="elevation-1"
     >
       <template v-slot:[`item.actions`]="{ item }">
-        <button type="button" class="btn btn-primary" @click="openEmail(item)">
-          {{ $t('bedrock-users.action.view') }}
-        </button>
+        <div v-if="item.status_delivered === 'SUPPRESSED'">
+          {{ $t('bedrock-users.misc.email_suppressed') }}
+        </div>
+        <div v-else>
+            <button type="button" class="btn btn-primary" @click="openEmail(item)">
+            {{ $t('bedrock-users.action.view') }}
+          </button>
+        </div>
       </template>
+
     </v-data-table>
   </v-card>
 </template>
@@ -94,7 +100,7 @@ export default {
       this.headers.push(
         {
           text: this.$t('bedrock-users.profile.email.recipient'),
-          value: 'recipient',
+          value: 'recipient_email',
         },
         {
           text: this.$t('bedrock-users.profile.email.subject'),
