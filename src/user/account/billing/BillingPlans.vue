@@ -1,59 +1,86 @@
 <template>
   <div>
+
     <v-radio-group v-model="planPeriod">
-      <v-radio label="Yearly" value="YEARLY"></v-radio>
-      <v-radio label="Montly" value="MONTHLY"></v-radio>
+      <v-radio
+        value="YEARLY"
+        :label="$t('bedrock-users.billing.plan.yearly')">
+      </v-radio>
+      <v-radio
+        value="MONTHLY"
+        :label="$t('bedrock-users.billing.plan.monthly')">
+      </v-radio>
     </v-radio-group>
 
-    <v-row justify="space-between">
-      <div v-for="plan in plans" :key="plan.xid">
-        <v-col class="text-center">
-          <div>
-            <div v-if="plan.preferred">PREFERRED</div>
-            <h3>{{ plan.name }}</h3>
-            <b>{{ plan.price_formatted }} / {{ planPeriodText() }}</b>
-            <hr />
-            <!--            {{ route('checkout', $plan->id) }}-->
+    <div class="row">
+
+      <div v-for="plan in plans" :key="plan.xid" class="col-md-4 col-sm-6">
+          <div class="pricingTable" :class="plan.color">
+            <div class="pricingTable-header">
+              <h3 class="preferred" v-if="plan.preferred">{{ $t('bedrock-users.billing.plan.preferred') }}</h3>
+              <h3 class="title">{{ plan.name | capitalize }}</h3>
+              <div class="price-value">
+                <!-- <span class="currency">$</span>-->
+                <span class="amount">{{ plan.price_formatted }}</span>
+                <span class="duration">/{{ planPeriodText() }}</span>
+              </div>
+            </div>
+            <ul class="pricing-content">
+              <li>50GB Disk Space</li>
+              <li>50 Email Accounts</li>
+              <li>50GB Bandwidth</li>
+              <li>Maintenance</li>
+              <li>15 Subdomains</li>
+            </ul>
 
             <div v-if="currentPlanId && plan.xid === currentPlanId">
-              your current plan
-
+              {{ $t('bedrock-users.billing.plan.your_current') }}
               <div v-if="onGracePeriod">
-                end at
-                {{ planEndsAt }}
-                <button-submit
-                  :is-loading="form.isLoading === plan.xid"
-                  :disabled="form.isLoading != null"
-                  @clicked="resume(plan.xid)"
-                  btnClass="btn btn-secondary"
-                >
-                  ResUme
-                </button-submit>
+                <div class="d-flex flex-column">
+                  <div>
+                    {{ $t('bedrock-users.billing.plan.ends_at') }}
+                    {{ planEndsAt }}
+                  </div>
+                  <div class="pricingTable-signup">
+                    <a href="#"
+                       :disabled="form.isLoading != null"
+                       @clicked="subscribe(plan.xid)">
+                      {{ $t('bedrock-users.billing.plan.resume') }}
+                    </a>
+                  </div>
+
+                </div>
               </div>
               <div v-else>
                 <button-submit
-                  :is-loading="form.isLoading === plan.xid"
+                  btnClass="btn btn-link"
                   :disabled="form.isLoading != null"
                   @clicked="cancel(plan.xid)"
-                  btnClass="btn btn-danger"
                 >
-                  CancEL
+                  {{ $t('bedrock-users.action.cancel') }}
                 </button-submit>
               </div>
             </div>
             <div v-else>
-              <button-submit
-                :is-loading="form.isLoading === plan.xid"
-                :disabled="form.isLoading != null"
-                @clicked="subscribe(plan.xid)"
-              >
-                Subscribe to {{ plan.name }}
-              </button-submit>
+                <div class="pricingTable-signup">
+                  <a href="#"
+                     :disabled="form.isLoading != null"
+                     @clicked="subscribe(plan.xid)">
+                    {{ $t('bedrock-users.billing.plan.subscribe') }}
+                  </a>
+                </div>
+
             </div>
+
+<!--            <div class="pricingTable-signup">-->
+<!--              <a href="#">Sign Up</a>-->
+<!--            </div>-->
           </div>
-        </v-col>
-      </div>
-    </v-row>
+        </div>
+
+
+    </div>
+
   </div>
 </template>
 
@@ -114,9 +141,9 @@ export default {
   methods: {
     planPeriodText() {
       if (this.planPeriod === 'YEARLY') {
-        return this.$t('billing.plans.yearly');
+        return this.$t('bedrock-users.billing.plan.year');
       }
-      return this.$t('billing.plans.monthly');
+      return this.$t('bedrock-users.billing.plan.month');
     },
 
     subscribe(xid) {
