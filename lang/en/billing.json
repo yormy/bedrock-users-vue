@@ -74,6 +74,12 @@
         "label" : "Pay",
         "hint" : ""
       }
+    },
+
+    "waiting_messages" : {
+      "message1" : "Connecting to our secure payment server",
+      "message2" : "Encrypting data",
+      "message3" : "Getting approval"
     }
   },
   "stripe": {
@@ -82,6 +88,8 @@
     }
   },
   "subscription" : {
+
+
     "trial_ends_at" : "Your trial will end at {date} only afterwards your credit card is charged"
   }
 }

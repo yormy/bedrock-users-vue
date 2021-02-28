@@ -1,11 +1,11 @@
 <template>
   <div>
-    <div>{{ $t('bedrock-users.billing.title') }}</div>
     <div v-if="trialEndsAt" class="alert alert-info">
       {{ $t('bedrock-users.billing.subscription.trial_ends_at', {'date' : trialEndsAt} ) }}
     </div>
 
     <billing-plans
+      v-if="form.showPlans"
       :monthly-plans="monthlyPlans"
       :yearly-plans="yearlyPlans"
       :current-plan-id="currentPlanId"
@@ -17,6 +17,12 @@
       @resume="resume"
     >
     </billing-plans>
+
+    <div v-else>
+      <div v-if="!checkout.client_secret">
+        <appearing-bullets :start-ms="0" :messages="messages"></appearing-bullets>
+      </div>
+    </div>
 
     <billing-checkout-stripe
       v-if="checkout.client_secret"
@@ -32,11 +38,13 @@
 <script>
 import BillingPlans from './BillingPlans.vue';
 import BillingCheckoutStripe from './stripe/BillingCheckoutStripe.vue';
+import { AppearingBullets } from 'bedrock-vue-components';
 
 export default {
   components: {
     BillingCheckoutStripe,
     BillingPlans,
+    AppearingBullets
   },
 
   props: {
@@ -74,6 +82,7 @@ export default {
     return {
       form: {
         isLoading: null,
+        showPlans : true,
       },
 
       checkout: {
@@ -86,12 +95,34 @@ export default {
       paymentMethod: {
         client_secret: null,
       },
+
+      messages: [
+        {
+          text: this.$t('bedrock-users.billing.checkout.waiting_messages.message1'),
+          loading: false,
+          completed: false,
+          processingMs: 1000,
+        },
+        {
+          text: this.$t('bedrock-users.billing.checkout.waiting_messages.message2'),
+          loading: false,
+          completed: false,
+          processingMs: 2000,
+        },
+        {
+          text: this.$t('bedrock-users.billing.checkout.waiting_messages.message3'),
+          loading: false,
+          completed: false,
+          processingMs: 2000,
+        },
+      ],
     };
   },
 
   methods: {
     subscribe(xid) {
       this.form.isLoading = xid;
+      this.form.showPlans = false;
 
       this.checkout.client_secret = null;
       const url = this.route('api.v1.user.account.billing.checkout.stripe.plan', xid);
@@ -112,7 +143,9 @@ export default {
             this.checkout.totals = resultData.totals;
           }
         })
-        .catch(() => {})
+        .catch(() => {
+          this.form.showPlans = true;
+        })
         .finally(() => {
           this.form.isLoading = null;
         });

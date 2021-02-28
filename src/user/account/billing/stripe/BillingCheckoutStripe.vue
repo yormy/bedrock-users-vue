@@ -64,7 +64,7 @@
                 <v-autocomplete
                   :items="countries"
                   item-text="name"
-                  item-value="iso3"
+                  item-value="iso2"
                   :label="$t('bedrock-users.billing.checkout.country.label')"
                   :hint="$t('bedrock-users.billing.checkout.country.hint')"
                   v-model="country"
@@ -142,7 +142,7 @@
             <div ref="card"></div>
             <div v-if="cardErrorMessage" class="text-danger">
               {{ $t('bedrock-users.billing.checkout.card_error') }}
-              <!-- {{ cardErrorMessage }}-->
+               {{ cardErrorMessage }}
             </div>
           </div>
         </div>

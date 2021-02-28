@@ -72,9 +72,6 @@
 
             </div>
 
-<!--            <div class="pricingTable-signup">-->
-<!--              <a href="#">Sign Up</a>-->
-<!--            </div>-->
           </div>
         </div>
 
