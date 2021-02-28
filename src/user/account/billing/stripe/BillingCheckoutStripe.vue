@@ -1,7 +1,11 @@
 <template>
   <div>
     <div class="card">
-      <div class="card-header">Subscribe to {{ plan.name }}</div>
+      <div class="card-header">
+        <h1>
+          {{ $t('bedrock-users.billing.plan.subscribe_to') }}  {{ plan.name }}
+        </h1>
+      </div>
       <div class="card-body">
         <ValidationObserver ref="form">
           <div class="row">
@@ -10,8 +14,8 @@
                 <v-text-field
                   autocomplete=""
                   v-model="name"
-                  :label="$t('billing.checkout.name_cardholder.label')"
-                  :hint="$t('billing.checkout.name_cardholder.hint')"
+                  :label="$t('bedrock-users.billing.checkout.name_cardholder.label')"
+                  :hint="$t('bedrock-users.billing.checkout.name_cardholder.hint')"
                   :error-messages="apiErrors.name ? apiErrors.name : errors"
                   :color="!apiErrors.name && name ? 'success' : ''"
                   @keydown="apiErrors.name = ''"
@@ -26,8 +30,8 @@
                 <v-text-field
                   autocomplete=""
                   v-model="address_line_1"
-                  :label="$t('billing.checkout.address_line_1.label')"
-                  :hint="$t('billing.checkout.address_line_1.hint')"
+                  :label="$t('bedrock-users.billing.checkout.address_line_1.label')"
+                  :hint="$t('bedrock-users.billing.checkout.address_line_1.hint')"
                   :error-messages="apiErrors.address_line_1 ? apiErrors.address_line_1 : errors"
                   :color="!apiErrors.address_line_1 && address_line_1 ? 'success' : ''"
                   @keydown="apiErrors.address_line_1 = ''"
@@ -42,8 +46,8 @@
                 <v-text-field
                   autocomplete=""
                   v-model="address_line_2"
-                  :label="$t('billing.checkout.address_line_2.label')"
-                  :hint="$t('billing.checkout.address_line_2.hint')"
+                  :label="$t('bedrock-users.billing.checkout.address_line_2.label')"
+                  :hint="$t('bedrock-users.billing.checkout.address_line_2.hint')"
                   :error-messages="apiErrors.address_line_2 ? apiErrors.address_line_2 : errors"
                   :color="!apiErrors.address_line_2 && address_line_2 ? 'success' : ''"
                   @keydown="apiErrors.address_line_2 = ''"
@@ -61,8 +65,8 @@
                   :items="countries"
                   item-text="name"
                   item-value="iso3"
-                  :label="$t('billing.checkout.country.label')"
-                  :hint="$t('billing.checkout.country.hint')"
+                  :label="$t('bedrock-users.billing.checkout.country.label')"
+                  :hint="$t('bedrock-users.billing.checkout.country.hint')"
                   v-model="country"
                   :error-messages="apiErrors.country ? apiErrors.country : errors"
                   :color="!apiErrors.country && country ? 'success' : ''"
@@ -77,8 +81,8 @@
                 <v-text-field
                   autocomplete=""
                   v-model="city"
-                  :label="$t('billing.checkout.city.label')"
-                  :hint="$t('billing.checkout.city.hint')"
+                  :label="$t('bedrock-users.billing.checkout.city.label')"
+                  :hint="$t('bedrock-users.billing.checkout.city.hint')"
                   :error-messages="apiErrors.city ? apiErrors.city : errors"
                   :color="!apiErrors.city && city ? 'success' : ''"
                   @keydown="apiErrors.city = ''"
@@ -93,8 +97,8 @@
                 <v-text-field
                   autocomplete=""
                   v-model="zipcode"
-                  :label="$t('billing.checkout.zipcode.label')"
-                  :hint="$t('billing.checkout.zipcode.hint')"
+                  :label="$t('bedrock-users.billing.checkout.zipcode.label')"
+                  :hint="$t('bedrock-users.billing.checkout.zipcode.hint')"
                   :error-messages="apiErrors.zipcode ? apiErrors.zipcode : errors"
                   :color="!apiErrors.zipcode && zipcode ? 'success' : ''"
                   @keydown="apiErrors.zipcode = ''"
@@ -111,8 +115,8 @@
                 <v-text-field
                   autocomplete=""
                   v-model="coupon_code"
-                  :label="$t('billing.checkout.coupon_code.label')"
-                  :hint="$t('billing.checkout.coupon_code.hint')"
+                  :label="$t('bedrock-users.billing.checkout.coupon_code.label')"
+                  :hint="$t('bedrock-users.billing.checkout.coupon_code.hint')"
                   :append-icon="coupon_valid ? 'fal fa-check' : ''"
                   :error-messages="apiErrors.coupon_code ? apiErrors.coupon_code : errors"
                   :color="!apiErrors.coupon_code && coupon_code ? 'success' : ''"
@@ -127,7 +131,7 @@
 
             <div class="col-md-8">
               <button-submit :is-loading="state.isApplyingCoupon" @clicked="applyCoupon">
-                <strong>{{ $t('billing.checkout.apply_coupon') | capitalizeFirst }}</strong>
+                <strong>{{ $t('bedrock-users.billing.checkout.apply_coupon.label') }}</strong>
               </button-submit>
             </div>
           </div>
@@ -137,7 +141,8 @@
           <div class="col-12">
             <div ref="card"></div>
             <div v-if="cardErrorMessage" class="text-danger">
-              {{ $t('billing.checkout.card_error') }}: {{ cardErrorMessage }}
+              {{ $t('bedrock-users.billing.checkout.card_error') }}
+               {{ cardErrorMessage }}
             </div>
           </div>
         </div>
@@ -146,7 +151,7 @@
           <div class="col-md-4">
             <div class="row">
               <div class="col-6 py-0">
-                {{ $t('billing.checkout.summary.price.label') }}
+                {{ $t('bedrock-users.billing.checkout.summary.price.label') }}
               </div>
               <div class="col-6 py-0 text-right">
                 <span class="" id="summary_price">
@@ -157,7 +162,7 @@
 
             <div v-if="summary.discountAmount" class="row">
               <div class="col-6 py-0">
-                {{ $t('billing.checkout.summary.discount.label') }}
+                {{ $t('bedrock-users.billing.checkout.summary.discount.label') }}
               </div>
               <div class="col-6 py-0 text-right">
                 <span class="" id="summary_discountamount">
@@ -168,7 +173,7 @@
 
             <div class="row">
               <div class="col-6 py-0">
-                {{ $t('billing.checkout.summary.subtotal.label') }}
+                {{ $t('bedrock-users.billing.checkout.summary.subtotal.label') }}
               </div>
               <div class="col-6 pt-0 text-right">
                 <span class="font-weight-bold" id="summary_subtotal">
@@ -179,7 +184,7 @@
 
             <div class="row">
               <div class="col-6 py-0">
-                {{ $t('billing.checkout.summary.tax.label', { tax: summary.taxPercent }) }}
+                {{ $t('bedrock-users.billing.checkout.summary.tax.label', { tax: summary.taxPercent }) }}
               </div>
               <div class="col-6 py-0 text-right">
                 <span class="" id="summary_taxamount">
@@ -190,7 +195,7 @@
 
             <div class="row">
               <div class="col-6 py-0">
-                {{ $t('billing.checkout.summary.total.label') }}
+                {{ $t('bedrock-users.billing.checkout.summary.total.label') }}
               </div>
               <div class="col-6 py-0 text-right">
                 <span class="font-weight-bold" id="summary_total">
@@ -210,7 +215,7 @@
           @clicked="buynow"
           id="btnBuy"
         >
-          <strong>Pay {{ summary.total | fromCents() | currency(plan.currency_symbol) }}</strong>
+          <strong> {{ $t('bedrock-users.billing.checkout.summary.pay.label') }} {{ summary.total | fromCents() | currency(plan.currency_symbol) }}</strong>
         </button-submit>
       </div>
     </div>
@@ -219,6 +224,7 @@
 
 <script>
 import { mergeErrors } from 'bedrock-vue-components';
+import AUTH from '@config/auth';
 
 let card = null;
 
@@ -297,7 +303,7 @@ export default {
   },
 
   created() {
-    this.stripe = Stripe(process.env.VUE_APP_ENV_STRIPE_KEY); /* eslint-disable-line */
+    this.stripe = Stripe(AUTH.STRIPE_KEY); /* eslint-disable-line */
     this.elements = this.stripe.elements();
   },
 

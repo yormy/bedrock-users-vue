@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div>Billing page</div>
+    <div>{{ $t('bedrock-users.billing.title') }}</div>
     <div v-if="trialEndsAt" class="alert alert-info">
-      Your trial ends at {{ trialEndsAt }} and only then your creditcard will be charged
+      {{ $t('bedrock-users.billing.subscription.trial_ends_at', {'date' : trialEndsAt} ) }}
     </div>
 
     <billing-plans

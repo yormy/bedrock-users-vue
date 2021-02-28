@@ -9,6 +9,7 @@ import confirm_action from './confirm_action.json';
 import user from './user.json';
 import profile from './profile.json';
 import validations from './validations.json';
+import billing from './billing.json';
 
 import registration from './registration.json';
 
@@ -24,5 +25,6 @@ export default {
   confirm_action,
   user,
   profile,
-  validations
+  validations,
+  billing
 };

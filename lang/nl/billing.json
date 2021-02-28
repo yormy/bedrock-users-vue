@@ -1,0 +1,87 @@
+{
+  "title" : "Je Membership",
+  "plan" : {
+    "preferred" : "Beste optie",
+    "your_current" : "Huidige",
+    "ends_at" : "stopt op",
+    "resume" : "Hervatten",
+    "subscribe_to": "Aanmelden voor",
+    "subscribe" : "Aanmelden",
+    "yearly" : "Jaarlijks",
+    "monthly" : "Maandelijks",
+    "year" : "jaar",
+    "month" : "maand"
+   },
+  "checkout" : {
+    "name_cardholder" : {
+      "label" : "Naam kaarthouder",
+      "hint" : "De naam die op de kaart staat"
+    },
+    "address_line_1" : {
+      "label" : "Adresregel",
+      "hint" : ""
+    },
+    "address_line_2" : {
+      "label" : "Adresregel 2",
+      "hint" : ""
+    },
+    "country" : {
+      "label" : "Land",
+      "hint" : ""
+    },
+    "city" : {
+      "label" : "Stad",
+      "hint" : ""
+    },
+    "zipcode" : {
+      "label" : "Postcode",
+      "hint" : ""
+    },
+    "coupon_code" : {
+      "label" : "Kortingscode",
+      "hint" : ""
+    },
+
+    "card_error" : "Kaart error",
+
+    "apply_coupon" : {
+      "label" : "Korting verwerken",
+      "hint" : ""
+    },
+
+    "summary" : {
+      "price" : {
+        "label" : "Prijs",
+        "hint" : ""
+      },
+      "discount" : {
+        "label" : "Korting",
+        "hint" : ""
+      },
+      "subtotal" : {
+        "label" : "Subtotaal",
+        "hint" : ""
+      },
+      "tax" : {
+        "label" : "BTW",
+        "hint" : ""
+      },
+      "total" : {
+        "label" : "Totaal",
+        "hint" : ""
+      },
+      "pay" : {
+        "label" : "Betaal",
+        "hint" : ""
+      }
+    }
+  },
+  "stripe": {
+    "error" : {
+      "Your card number is incomplete." : "Kaart informatie niet correct"
+    }
+  },
+  "subscription" : {
+    "trial_ends_at" : "Je probeerversie eindigd per {date} pas daarna worden kosten berekend"
+  }
+}

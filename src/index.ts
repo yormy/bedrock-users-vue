@@ -23,6 +23,8 @@ import MyNotificationSettings from './user/account/MyNotificationSettings.vue';
 import ImpersonatedWarning from './user/ImpersonatedWarning.vue';
 import AutoLogout from './user/AutoLogout.vue';
 
+import Billing from './user/account/billing/Billing.vue';
+
 
 import translations from '../lang/translations';
 
@@ -47,5 +49,6 @@ export {
   MyNotifications,
   MyNotificationSettings,
   ImpersonatedWarning,
-  AutoLogout
+  AutoLogout,
+  Billing
 };
