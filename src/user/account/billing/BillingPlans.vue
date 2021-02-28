@@ -26,11 +26,7 @@
               </div>
             </div>
             <ul class="pricing-content">
-              <li>50GB Disk Space</li>
-              <li>50 Email Accounts</li>
-              <li>50GB Bandwidth</li>
-              <li>Maintenance</li>
-              <li>15 Subdomains</li>
+              <span v-html="plan.feature_list_html"></span>
             </ul>
 
             <div v-if="currentPlanId && plan.xid === currentPlanId">
