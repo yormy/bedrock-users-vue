@@ -142,7 +142,7 @@
             <div ref="card"></div>
             <div v-if="cardErrorMessage" class="text-danger">
               {{ $t('bedrock-users.billing.checkout.card_error') }}
-               {{ cardErrorMessage }}
+              <!-- {{ cardErrorMessage }}-->
             </div>
           </div>
         </div>

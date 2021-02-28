@@ -44,7 +44,7 @@
                   <div class="pricingTable-signup">
                     <a href="#"
                        :disabled="form.isLoading != null"
-                       @clicked="subscribe(plan.xid)">
+                       @click="subscribe(plan.xid)">
                       {{ $t('bedrock-users.billing.plan.resume') }}
                     </a>
                   </div>
@@ -65,7 +65,7 @@
                 <div class="pricingTable-signup">
                   <a href="#"
                      :disabled="form.isLoading != null"
-                     @clicked="subscribe(plan.xid)">
+                     @click="subscribe(plan.xid)">
                     {{ $t('bedrock-users.billing.plan.subscribe') }}
                   </a>
                 </div>

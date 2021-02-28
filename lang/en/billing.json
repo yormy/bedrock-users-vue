@@ -1,3 +1,87 @@
 {
+  "title" : "Your plan",
+  "plan" : {
+    "preferred" : "Best Option",
+    "your_current" : "Current",
+    "ends_at" : "ends at",
+    "resume" : "Resume",
+    "subscribe_to": "Sign up for",
+    "subscribe" : "Sign up",
+    "yearly" : "Yearly",
+    "monthly" : "Monthly",
+    "year" : "year",
+    "month" : "month"
+  },
+  "checkout" : {
+    "name_cardholder" : {
+      "label" : "Name cardholder",
+      "hint" : "The name on the card"
+    },
+    "address_line_1" : {
+      "label" : "Address",
+      "hint" : ""
+    },
+    "address_line_2" : {
+      "label" : "Address 2",
+      "hint" : ""
+    },
+    "country" : {
+      "label" : "Country",
+      "hint" : ""
+    },
+    "city" : {
+      "label" : "City",
+      "hint" : ""
+    },
+    "zipcode" : {
+      "label" : "Zipcode",
+      "hint" : ""
+    },
+    "coupon_code" : {
+      "label" : "Discount code",
+      "hint" : ""
+    },
 
+    "card_error" : "Card error",
+
+    "apply_coupon" : {
+      "label" : "Process discount",
+      "hint" : ""
+    },
+
+    "summary" : {
+      "price" : {
+        "label" : "Price",
+        "hint" : ""
+      },
+      "discount" : {
+        "label" : "Discount",
+        "hint" : ""
+      },
+      "subtotal" : {
+        "label" : "Subtotal",
+        "hint" : ""
+      },
+      "tax" : {
+        "label" : "VAT",
+        "hint" : ""
+      },
+      "total" : {
+        "label" : "Total",
+        "hint" : ""
+      },
+      "pay" : {
+        "label" : "Pay",
+        "hint" : ""
+      }
+    }
+  },
+  "stripe": {
+    "error" : {
+      "Your card number is incomplete." : "Card information not correct"
+    }
+  },
+  "subscription" : {
+    "trial_ends_at" : "Your trial will end at {date} only afterwards your credit card is charged"
+  }
 }
