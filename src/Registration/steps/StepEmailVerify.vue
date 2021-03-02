@@ -1,6 +1,6 @@
 <template>
   <div class="card-body">
-    {{confirmableAction}}
+
     <confirm-action
       :confirm-title="confirmableAction.title"
       :confirm-sent-to="sentToEmail"
@@ -13,6 +13,7 @@
       @verified="verified"
     >
     </confirm-action>
+
   </div>
 </template>
 
