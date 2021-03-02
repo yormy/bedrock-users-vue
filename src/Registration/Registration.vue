@@ -4,9 +4,6 @@
       {{ successMessage }}
     </div>
 
-    {{continueXid}}
-    {{currentStep}}
-
     <div v-if="error" class="alert alert-danger">
       {{ error }}
     </div>
@@ -85,7 +82,7 @@ export default {
 
   props: {
     error: String,
-    continueXid: String,
+    continueRegistrationXid: String,
     registrationActionUrl: String,
     registrationPhoneActionUrl: String,
     registrationInviteActionUrl: String,
@@ -96,6 +93,21 @@ export default {
     currentStep : {
       type: String,
       required : true
+    },
+
+    action : {
+      type: Object,
+      required : false
+    },
+
+    sentToEmailProp : {
+      type: String,
+      required : false
+    },
+
+    sentToPhoneProp : {
+      type: String,
+      required : false
     }
   },
 
@@ -106,11 +118,11 @@ export default {
       registrationXid: '',
       successMessage: '',
 
-      sentToEmail: '',
-      sentToPhone: '',
+      sentToEmail: this.sentToEmailProp,
+      sentToPhone: this.sentToPhoneProp,
 
       confirmableAction: {
-        confirmableActionXid: '',
+        xid: '',
         method: '',
         title: '',
         description: '',
@@ -147,14 +159,15 @@ export default {
 
     this.steps.push(this.REGISTER_STEP_FINISHED);
 
-    if (this.continueXid) {
+    if (this.continueRegistrationXid) {
 
-      console.log(this.currentStep);
       if (this.currentStep ==='EMAIL_VERIFY') {
-        this.registrationXid = this.continueXid;
+        this.registrationXid = this.continueRegistrationXid;
         this.registerStep = this.REGISTER_STEP_EMAIL_VERIFY;
+
+        this.confirmableAction.xid = this.action.xid;
+        this.confirmableAction = this.action;
         this.confirmableAction.method = 'EMAIL';
-        console.log(this.registerStep);
       }
       //
       //

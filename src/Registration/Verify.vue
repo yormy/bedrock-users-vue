@@ -121,6 +121,7 @@ export default {
 
   props: {
     loginnameProp: String,
+
     xid: String,
 
     verifyType: {

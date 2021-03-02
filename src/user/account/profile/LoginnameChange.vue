@@ -219,7 +219,7 @@ export default {
         .then((response) => {
           if (response.data.success) {
             this.successMessage = response.data.message;
-            this.confirmableAction.xid = response.data.data.confirmableActionXid;
+            this.confirmableAction.xid = response.data.data.xid;
             this.confirmableAction.method = response.data.data.method;
             this.confirmableAction.title = response.data.data.title;
             this.confirmableAction.description = response.data.data.description;

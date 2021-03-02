@@ -8,7 +8,7 @@
       verify-type="CODE"
       :verify-action-url="route('api.v1.user.registration.verify.verify')"
       :verify-resend-action-url="route('api.v1.user.registration.resend')"
-      :xid="confirmableAction.confirmableActionXid"
+      :xid="confirmableAction.xid"
       @verified="verified"
     >
     </confirm-action>

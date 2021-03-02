@@ -68,6 +68,7 @@
       <div class="col-8">
           <div v-if="show.phoneChange">
             <secure-phone-change
+              :user="user"
               :change-action-url="phoneChangeUrl"
               :authenticator-enabled="authenticatorEnabled"
             >
