@@ -7,7 +7,7 @@
             <ValidationProvider rules="required|strong-password" name="password">
               <v-text-field
                 v-model="currentPassword"
-                :label="$t('misc.login.password.label')"
+                :label="$t('bedrock-users.login.password.label')"
                 :append-icon="passwordIcon"
                 @click:append="() => (passwordExpose = !passwordExpose)"
                 :type="passwordExpose ? 'text' : 'password'"

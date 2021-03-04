@@ -95,7 +95,7 @@
   "reset" : {
     "loginname": {
       "title": " Reset your login name",
-      "button" : "reset now",
+      "button" : "Reset loginname",
       "reconfirmation" : {
         "title" : "Enter your NEW loginname again to confirm"
       }
@@ -103,7 +103,7 @@
 
     "password": {
       "title": " Reset your password",
-      "button" : "reset now",
+      "button" : "Reset password",
       "reconfirmation" : {
         "title" : "Enter your NEW password again to confirm"
       }
@@ -147,10 +147,14 @@
         "label": "Enter your new phone number",
         "hint": "The new phone numberyou want to use"
       }
-    },
-
-    "current_password": {
-      "label" : "Your current password"
     }
+  },
+
+  "current_password": {
+    "label" : "Your current password"
+  },
+
+  "current_email": {
+    "label" : "Your current email address"
   }
 }

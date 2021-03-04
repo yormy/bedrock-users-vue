@@ -13,8 +13,8 @@
             <v-text-field
               autocomplete="password"
               v-model="form.password"
-              :label="$t('misc.login.password.label')"
-              :hint="$t('misc.login.password.hint')"
+              :label="$t('bedrock-users.login.password.label')"
+              :hint="$t('bedrock-users.login.password.hint')"
               :append-icon="passwordExpose ? 'fal fa-eye' : 'fal fa-eye-slash'"
               @click:append="() => (passwordExpose = !passwordExpose)"
               :type="passwordExpose ? 'text' : 'password'"
@@ -51,7 +51,7 @@
 
         <div class="d-flex justify-content-between">
           <button-submit :is-loading="form.isSubmittingSubmit" @clicked="confirmAction">
-            {{ $t('misc.confirmtoken.confirm') }}
+            {{ $t('bedrock-users.action.confirm') }}
           </button-submit>
         </div>
       </ValidationObserver>
@@ -112,9 +112,7 @@ export default {
         .post(this.verifyActionUrl, data)
         .then((response) => {
           if (response.data.success) {
-            this.isSubmitting = false;
             this.resetErrorState();
-            this.form.password = '';
             this.$emit('verified', response.data);
           }
           this.form.isSubmittingSubmit = false;

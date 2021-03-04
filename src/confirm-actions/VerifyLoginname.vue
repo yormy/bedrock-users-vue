@@ -12,8 +12,8 @@
             <v-text-field
               autocomplete="password"
               v-model="form.loginname"
-              :label="$t('misc.login.loginname.label')"
-              :hint="$t('misc.login.loginname.hint')"
+              :label="$t('bedrock-users.login.loginname.label')"
+              :hint="$t('bedrock-users.login.loginname.hint')"
               :append-icon="'fal fa-user'"
               :error-messages="apiErrors.loginname ? apiErrors.loginname : errors"
               :color="!apiErrors.loginname && form.loginname ? 'success' : ''"
@@ -47,7 +47,7 @@
 
         <div class="d-flex justify-content-between">
           <button-submit :is-loading="form.isSubmittingSubmit" @clicked="confirmAction">
-            {{ $t('misc.confirmtoken.confirm') }}
+            {{ $t('bedrock-users.action.confirm') }}
           </button-submit>
         </div>
       </ValidationObserver>

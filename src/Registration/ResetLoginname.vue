@@ -8,8 +8,8 @@
           <ValidationProvider v-slot="{ errors }" rules="required|min:8" name="loginname">
             <v-text-field
               v-model="form.loginname"
-              :label="$t('profile.change.loginname.new.label')"
-              :hint="$t('profile.change.loginname.new.hint')"
+              :label="$t('bedrock-users.profile.change.loginname.new.label')"
+              :hint="$t('bedrock-users.profile.change.loginname.new.hint')"
               append-icon="fal fa-user"
               :error-messages="apiErrors.loginname ? apiErrors.loginname : errors"
               :color="!apiErrors.loginname && form.loginname ? 'success' : ''"
@@ -22,7 +22,7 @@
 
           <email-input
             id="fieldCurrentEmail"
-            :label="$t('profile.current_emailaddress')"
+            :label="$t('bedrock-users.profile.current_email.label')"
             :email-address.sync="form.email"
             :hint="apiErrors.email"
             :api-errors="apiErrors"
@@ -39,13 +39,12 @@
             :is-loading="form.isSubmitting"
             @clicked="resetLoginnameAction"
           >
-            {{ $t('profile.reset.loginname.button') }}
+            {{ $t('bedrock-users.profile.reset.loginname.button') }}
           </button-submit>
         </ValidationObserver>
       </div>
 
       <div v-else class="card">
-        <div class="card-header"></div>
         <div class="card-body">
           <confirm-action
             :confirm-title="confirmableAction.title"

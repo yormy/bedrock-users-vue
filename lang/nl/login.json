@@ -1,0 +1,53 @@
+{
+  "title" : "Inloggen",
+  "title_whitelist" : "Inloggen & Whitelist je IP",
+  "button" : "Inloggen",
+  "loginname" : {
+    "label" : "Je login naam",
+    "hint" : "Je naam om in te loggen (meestal je email adres)"
+  },
+  "password" : {
+    "label" : "Je wachtwoord in",
+    "hint" : "Minimaal 6 tekens"
+  },
+
+  "authenticator_code" : {
+    "label": "Voer je authenticator code in"
+  },
+
+  "security" : {
+    "trust_this_browser" : {
+      "title" : "Vertrouw deze browser",
+      "description" : ""
+    }
+  },
+  "no_account_signup" : {
+    "title": "Nog geen account?",
+    "buttontext": "Aanmelden"
+  },
+  "forgot" : {
+    "title" : "vergeten?"
+  },
+
+  "appearing" : {
+    "message1" : "Valideren van je gegevens",
+    "message2" : "Ontsleutelen van de gegevens",
+    "message3" : "Verhogen van het security"
+  },
+
+  "session" : {
+    "expired" : {
+      "title" : "Sessie verlopen",
+      "description" : "Doordat er geen activiteit is gedetecteerd is je sessie verlopen",
+      "login_again" : "Opnieuw inloggen"
+    }
+  },
+  "reset" : {
+    "password": {
+      "title": "Reset wachtwoord"
+    },
+    "loginname": {
+      "title": "Reset loginname"
+    }
+  }
+}

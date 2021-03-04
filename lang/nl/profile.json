@@ -96,18 +96,18 @@
 
   "reset" : {
     "loginname": {
-      "title": " Reset your login name",
-      "button" : "reset now",
+      "title": " Reset je login naam",
+      "button" : "Reset login naam",
       "reconfirmation" : {
-        "title" : "Enter your NEW loginname again to confirm"
+        "title" : "Voer je nieuwe login naam nogmaals in"
       }
     },
 
     "password": {
-      "title": " Reset your password",
-      "button" : "reset now",
+      "title": " Reset je wachtwoord",
+      "button" : "Reset wachtwoord",
       "reconfirmation" : {
-        "title" : "Enter your NEW password again to confirm"
+        "title" : "Voer je nieuwe wachtwoord nogmaals in"
       }
     }
   },
@@ -149,10 +149,14 @@
         "label": "Enter your new phone number",
         "hint": "The new phone numberyou want to use"
       }
-    },
-
-    "current_password": {
-      "label" : "Je huidig wachtwoord"
     }
+  },
+
+  "current_password": {
+    "label" : "Je huidig wachtwoord"
+  },
+
+  "current_email": {
+    "label" : "Je huidige email adres"
   }
 }

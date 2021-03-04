@@ -2,11 +2,14 @@
   <div>
     <v-dialog v-model="sessionExpiredMessage" width="500" persistent>
       <v-card>
-        <v-card-title class="headline">Session expired</v-card-title>
+        <v-card-title class="headline">
+          {{ $t('bedrock-users.login.session.expired.title') }}
+        </v-card-title>
 
         <v-card-text>
-          <p>Doordat er geen activiteit is gedetecteerd is je sessie verlopen</p>
-          <button @click="sessionExpiredMessage = ''" class="btn btn-success">Login Again</button>
+          <p>{{ $t('bedrock-users.login.session.expired.description') }}</p>
+
+          <button @click="sessionExpiredMessage = ''" class="btn btn-success">{{ $t('bedrock-users.login.session.expired.login_again') }}</button>
         </v-card-text>
       </v-card>
     </v-dialog>
@@ -29,17 +32,17 @@
       <div v-if="showDecrypting">
         <br />
         <div class="">
-          <h1>Processing...</h1>
+          <h1>{{ $t('bedrock-users.misc.processing') }}</h1>
           <appearing-bullets :messages="messages" :reset="showDecrypting"></appearing-bullets>
         </div>
       </div>
 
       <div v-else>
         <div v-if="login.tokenIpWhitelisting">
-          <h1>LOGIN and whitelist your ip</h1>
+          <h1>{{ $t('bedrock-users.login.title_whitelist') }}</h1>
         </div>
         <div v-else>
-          <h1>LOGIN VUE</h1>
+          <h1>{{ $t('bedrock-users.login.title') }}</h1>
         </div>
 
         <div v-if="tokenErrorMessage">
@@ -56,8 +59,8 @@
               <v-text-field
                 autocomplete="email"
                 v-model="login.loginname"
-                :label="$t('misc.login.loginname.label')"
-                :hint="$t('misc.login.loginname.hint')"
+                :label="$t('bedrock-users.login.loginname.label')"
+                :hint="$t('bedrock-users.login.loginname.hint')"
                 :type="'email'"
                 :error-messages="apiErrors.loginname ? apiErrors.loginname : errors"
                 :color="!apiErrors.loginname && login.loginname ? 'success' : ''"
@@ -75,8 +78,8 @@
               <v-text-field
                 autocomplete="password"
                 v-model="login.password"
-                :label="$t('misc.login.password.label')"
-                :hint="$t('misc.login.password.hint')"
+                :label="$t('bedrock-users.login.password.label')"
+                :hint="$t('bedrock-users.login.password.hint')"
                 :append-icon="passwordIcon"
                 @click:append="() => (passwordExpose = !passwordExpose)"
                 :type="passwordExpose ? 'text' : 'password'"
@@ -91,7 +94,7 @@
           </div>
 
           <div v-show="showProvideAuthenticatorCode">
-            Type your google authenticator code
+            {{ $t('bedrock-users.login.authenticator_code.label') }}
             <CodeInput
               :loading="formConfirmCode.isSubmitting"
               :invalid-input="confirmCodeInvalid"
@@ -114,7 +117,7 @@
               >
                 <v-text-field
                   v-model="login.tokenIpWhitelisting"
-                  :label="$t('misc.login.authenticator_code.label')"
+                  :label="$t('bedrock-users.login.authenticator_code.label')"
                   :error-messages="
                     apiErrors.tokenIpWhitelisting ? apiErrors.tokenIpWhitelisting : errors
                   "
@@ -131,11 +134,11 @@
             <div class="form-group row mb-3">
               <div class="col-sm-12">
                 <v-switch v-model="login.trustBrowser" color="success" hide-details></v-switch>
-                {{ $t('misc.login.security.trust_this_browser.title') }}
+                {{ $t('bedrock-users.login.security.trust_this_browser.title') }}
               </div>
               <div class="col-sm-12">
                 <small class="form-text text-muted">
-                  {{ $t('misc.login.security.trust_this_browser.description') }}
+                  {{ $t('bedrock-users.login.security.trust_this_browser.description') }}
                 </small>
               </div>
             </div>
@@ -154,7 +157,7 @@
           </div>
 
           <button-submit id="btnLogin" :is-loading="form.isSubmitting" @clicked="loginAction">
-            {{ $t('misc.login.button') }}
+            {{ $t('bedrock-users.login.button') }}
           </button-submit>
         </ValidationObserver>
       </div>
@@ -225,19 +228,19 @@ export default {
 
       messages: [
         {
-          text: 'Validating your credentials',
+          text: this.$t('bedrock-users.login.appearing.message1'),
           loading: false,
           completed: false,
           processingMs: 3000,
         },
         {
-          text: 'Decrypting your data',
+          text: this.$t('bedrock-users.login.appearing.message2'),
           loading: false,
           completed: false,
           processingMs: 2000,
         },
         {
-          text: 'Increasing your security level',
+          text: this.$t('bedrock-users.login.appearing.message3'),
           loading: false,
           completed: false,
           processingMs: 1000,

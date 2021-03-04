@@ -14,5 +14,6 @@
   "logout" : "Logout",
   "view" : "View",
   "request_change" : "Request change",
-  "confirm": "Confirm"
+  "confirm": "Confirm",
+  "resend" : "Resend"
 }

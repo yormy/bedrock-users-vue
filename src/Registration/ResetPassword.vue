@@ -13,8 +13,8 @@
             <v-text-field
               autocomplete="password"
               v-model="form.newPassword"
-              :label="$t('misc.login.password.label')"
-              :hint="$t('misc.login.password.hint')"
+              :label="$t('bedrock-users.login.password.label')"
+              :hint="$t('bedrock-users.login.password.hint')"
               :append-icon="passwordNewExpose ? 'fal fa-eye' : 'fal fa-eye-slash'"
               @click:append="() => (passwordNewExpose = !passwordNewExpose)"
               :type="passwordNewExpose ? 'text' : 'password'"
@@ -34,8 +34,8 @@
           >
             <v-text-field
               v-model="form.confirmPassword"
-              :label="$t('misc.registration.re-enter-password')"
-              :hint="$t('misc.login.password.hint')"
+              :label="$t('bedrock-users.registration.input.password_confirm.label')"
+              :hint="$t('bedrock-users.registration.input.password_confirm.hint')"
               :append-icon="passwordConfirmExpose ? 'fal fa-eye' : 'fal fa-eye-slash'"
               @click:append="() => (passwordConfirmExpose = !passwordConfirmExpose)"
               :type="passwordConfirmExpose ? 'text' : 'password'"
@@ -47,7 +47,7 @@
 
           <email-input
             id="fieldCurrentEmail"
-            :label="$t('profile.current_emailaddress')"
+            :label="$t('bedrock-users.profile.current_email.label')"
             :email-address.sync="form.email"
             :hint="apiErrors.email"
             :api-errors="apiErrors"
@@ -64,13 +64,12 @@
             :is-loading="form.isSubmitting"
             @clicked="resetPasswordAction"
           >
-            {{ $t('profile.reset.password.button') }}
+            {{ $t('bedrock-users.profile.reset.password.button') }}
           </button-submit>
         </ValidationObserver>
       </div>
 
       <div v-else class="card">
-        <div class="card-header"></div>
         <div class="card-body">
           <confirm-action
             :confirm-title="confirmableAction.title"

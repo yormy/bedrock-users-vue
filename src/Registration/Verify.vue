@@ -95,13 +95,13 @@
               :is-loading="form.isSubmittingResend"
               @clicked="resendAction"
             >
-              {{ $t('actions.resend') }}
+              {{ $t('bedrock-users.action.resend') }}
             </button-submit>
           </div>
 
           <div>
             <button-submit :is-loading="form.isSubmittingSubmit" @clicked="confirmAction">
-              {{ $t('actions.confirm') }}
+              {{ $t('bedrock-users.action.confirm') }}
             </button-submit>
           </div>
         </div>

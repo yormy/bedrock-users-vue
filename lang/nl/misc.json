@@ -15,12 +15,6 @@
   "created_at": "Aangemaakt op",
   "user_agent" : "User agent",
 
-  "login" : {
-    "authenticator_code" : {
-      "label" : "Type de code van de authenticator"
-    }
-  },
-
   "title" : "Titel",
   "subject" : "Onderwerp",
   "summary" : "Samenvatting",
@@ -38,6 +32,7 @@
     }
   },
 
-  "email_suppressed" : "Uitgeschreven"
+  "email_suppressed" : "Uitgeschreven",
+  "processing" : "Verwerken..."
 
 }

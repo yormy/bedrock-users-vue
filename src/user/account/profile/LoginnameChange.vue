@@ -45,7 +45,7 @@
                   autocomplete="password"
                   v-model="login.password"
                   :label="$t('profile.change.current_password.label')"
-                  :hint="$t('misc.login.password.hint')"
+                  :hint="$t('bedrock-users.login.password.hint')"
                   :append-icon="passwordIcon"
                   @click:append="() => (passwordExpose = !passwordExpose)"
                   :type="passwordExpose ? 'text' : 'password'"

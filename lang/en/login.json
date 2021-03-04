@@ -1,0 +1,54 @@
+{
+  "title" : "Login our platform",
+  "title_whitelist" : "Login & Whitelist you IP",
+  "button" : "Login",
+  "loginname" : {
+    "label" : "Your username",
+    "hint" : "the name you use to login, usually your email address"
+  },
+  "password" : {
+    "label" : "Your password",
+    "hint" : "At least 8 characters"
+  },
+
+  "authenticator_code" : {
+    "label": "type your authenticator code"
+  },
+
+  "security" : {
+    "trust_this_browser" : {
+      "title" : "Trust this browser",
+      "description" : "Trust this browser"
+    }
+  },
+  "no_account_signup" : {
+    "title": "Don't have an account?",
+    "buttontext": "sign up"
+  },
+  "forgot" : {
+    "title" : "forgot?"
+  },
+
+  "appearing" : {
+    "message1" : "Validating your credentials",
+    "message2" : "Decrypting your data",
+    "message3" : "Increasing your security level"
+  },
+
+  "session" : {
+    "expired" : {
+      "title" : "Session expired",
+      "description" : "There was no activity, so for security reasons we logged you out",
+      "login_again" : "Login again"
+    }
+  },
+
+  "reset" : {
+    "password" : {
+      "title" : "Reset password"
+    },
+    "loginname" : {
+      "title" : "Reset loginname"
+    }
+  }
+}

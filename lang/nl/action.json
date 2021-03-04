@@ -14,5 +14,6 @@
   "logout" : "Uitloggen",
   "view" : "Bekijken",
   "request_change" : "Verzoek wijziging",
-  "confirm": "Bevestigen"
+  "confirm": "Bevestigen",
+  "resend" : "Opnieuw versturen"
 }

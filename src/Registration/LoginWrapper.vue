@@ -15,9 +15,9 @@
           <div class="d-flex justify-content-center">
             <div class="d-flex justify-content-end">
               <button id="btnRegistration">
-                {{ $t('misc.login.no_account_signup.title') }}
+                {{ $t('bedrock-users.login.no_account_signup.title') }}
                 <a :href="registrationActionUrl">
-                  {{ $t('misc.login.no_account_signup.buttontext') }}
+                  {{ $t('bedrock-users.login.no_account_signup.buttontext') }}
                 </a>
               </button>
             </div>
@@ -27,32 +27,35 @@
         <div class="d-flex justify-content-end">
           <button id="btnShowForgot" @click="forgot = true">
             <span class="fal fa-unlock mr-1"></span>
-            {{ $t('misc.login.forgot.title') }}
+            {{ $t('bedrock-users.login.forgot.title') }}
           </button>
         </div>
       </div>
     </div>
 
-    <div v-else>
-      <div class="btn btn-primary" @click="showPasswordForgot = true">
-        {{ $t('misc.password') | capitalizeFirst }}
-      </div>
-      <div class="btn btn-primary" @click="showPasswordForgot = false">
-        {{ $t('misc.loginname') | capitalizeFirst }}
+    <div v-else class="d-flex flex-column mt-3">
+      <div class="d-flex justify-content-end">
+        <div class="btn btn-link" @click="showPasswordForgot = true">
+          <span class="fal fa-key"></span> {{ $t('bedrock-users.login.reset.password.title') }}
+        </div>
+        <div class="btn btn-link" @click="showPasswordForgot = false">
+          <span class="fal fa-fw fa-user"></span> {{ $t('bedrock-users.login.reset.loginname.title') }}
+        </div>
       </div>
 
-      <div v-if="showPasswordForgot">
-        <h1>{{ $t('profile.reset.password.title') | capitalizeFirst }}</h1>
+      <div v-if="showPasswordForgot" class="mt-3">
+        <h1>{{ $t('bedrock-users.profile.reset.password.title') }}</h1>
         <reset-password :reset-password-request-url="resetPasswordRequestUrl"> </reset-password>
       </div>
-      <div v-else>
-        <h1>{{ $t('profile.reset.loginname.title') | capitalizeFirst }}</h1>
+      <div v-else class="mt-3">
+        <h1>{{ $t('bedrock-users.profile.reset.loginname.title') }}</h1>
         <reset-loginname :reset-loginname-request-url="resetLoginnameRequestUrl"> </reset-loginname>
       </div>
 
       <div class="d-flex justify-content-end">
         <button id="btnShowLogin" @click="forgot = false">
-          <span class="fal fa-unlock mr-1"></span>Login
+          <span class="fal fa-unlock mr-1"></span>
+          {{ $t('bedrock-users.login.button') }}
         </button>
       </div>
     </div>

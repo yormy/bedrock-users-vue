@@ -15,12 +15,6 @@
   "created_at": "Created at",
   "user_agent" : "User agent",
 
-  "login" : {
-    "authenticator_code" : {
-      "label" : "Type your authenticator code"
-    }
-  },
-
   "title" : "Title",
   "subject" : "Subject",
   "summary" : "Summary",
@@ -38,5 +32,6 @@
       }
     },
 
-  "email_suppressed" : "Unsubscribed"
+  "email_suppressed" : "Unsubscribed",
+  "processing" : "Processing..."
 }
