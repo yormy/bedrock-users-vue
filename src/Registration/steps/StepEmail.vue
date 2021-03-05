@@ -92,11 +92,24 @@
       </div>
     </div>
 
-    <div class="mt-3 float-right">
-      <button-submit :is-loading="form.isSubmitting" @clicked="registerAction">
-        {{ $t('bedrock-users.registration.button.register_now') }}
-      </button-submit>
+    <div class="d-flex justify-space-between mt-3">
+      <div>
+        <a :href="route('user.login')">
+          <button id="btnShowLogin" @click="forgot = false">
+            <span class="fal fa-unlock mr-1"></span>
+            {{ $t('bedrock-users.login.button') }}
+          </button>
+        </a>
+      </div>
+      <div>
+        <button-submit :is-loading="form.isSubmitting" @clicked="registerAction">
+          {{ $t('bedrock-users.registration.button.register_now') }}
+        </button-submit>
+      </div>
     </div>
+
+
+
   </div>
 </template>
 

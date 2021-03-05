@@ -34,13 +34,16 @@
             </div>
           </div>
 
-          <button-submit
-            id="btnResetLoginname"
-            :is-loading="form.isSubmitting"
-            @clicked="resetLoginnameAction"
-          >
-            {{ $t('bedrock-users.profile.reset.loginname.button') }}
-          </button-submit>
+          <div class="float-right">
+            <button-submit
+              id="btnResetLoginname"
+              :is-loading="form.isSubmitting"
+              @clicked="resetLoginnameAction"
+            >
+              {{ $t('bedrock-users.profile.reset.loginname.button') }}
+            </button-submit>
+          </div>
+
         </ValidationObserver>
       </div>
 
