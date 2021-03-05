@@ -3,6 +3,12 @@
     "email": {
       "label": "Je email address"
     },
+
+    "phone": {
+      "title": "Je telefoonnummer",
+      "description": "We hebben je telefoonnummer nodig om je identiteit vast te stellen</br>na verificatie heb je toegang"
+    },
+
     "password" : {
       "label": "Type een nieuw wachtwoord",
       "hint": "Een moeilijk wachtwoord van minimaal 8 tekens"
@@ -15,8 +21,14 @@
       "label": "Ik ben akkoord met het bovenstaande",
       "error": "Wil je nog even akkoord gaan met het bovenstaande",
       "warning_marketing": "Je bent deze waarschijnlijk vergeten"
+    },
+
+    "invite_code" : {
+      "title_optional" : "Optionele uitnodigings code",
+      "title_required" : "Je uitnodigings code"
     }
   },
+  "click_to_change_phone" : "Verander je telefoonnummer",
 
   "terms" : {
     "general" : "Om optimaal gebruik te maken van de mogelijkheden ga je akkoord met de algemene voorwaarden en privacy policy",

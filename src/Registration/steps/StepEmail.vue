@@ -92,9 +92,11 @@
       </div>
     </div>
 
-    <button-submit :is-loading="form.isSubmitting" @clicked="registerAction">
-      {{ $t('bedrock-users.registration.button.register_now') }}
-    </button-submit>
+    <div class="mt-3 float-right">
+      <button-submit :is-loading="form.isSubmitting" @clicked="registerAction">
+        {{ $t('bedrock-users.registration.button.register_now') }}
+      </button-submit>
+    </div>
   </div>
 </template>
 
@@ -214,7 +216,7 @@ export default {
             this.emailWarning = error.response.data.data.warnings;
             this.backendhint = this.emailWarning.email.message;
             this.skipWarnings = true;
-            this.$refs.emailInput.focus();
+            this.$refs.emailInput.$el.focus();
           }
         })
         .finally(() => {

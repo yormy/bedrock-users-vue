@@ -1,8 +1,10 @@
 <template>
   <div class="container">
-    <h1>enter your phone</h1>
-    Why we need your phone... We need your phone number to be able to verify your identity, after
-    which you will be granted access to our portal
+    <h1>{{$t('bedrock-users.registration.input.phone.title')}}</h1>
+    <p>
+      <span v-html="$t('bedrock-users.registration.input.phone.description')"></span>
+    </p>
+
     <maz-phone-number-input
       v-model="phoneNumerUnformatted"
       size="lg"
@@ -12,6 +14,7 @@
       @update="updated"
       :default-country-code="'NL'"
       @keyup.native.enter="registerAction"
+      :translations="$t('bedrock-core.mazui.phone')"
     />
 
     <div v-if="apiErrors.phone">
@@ -32,7 +35,11 @@
       </div>
     </div>
 
-    <button-submit :is-loading="form.isSubmitting" @clicked="registerAction"> Next </button-submit>
+    <div class="mt-3 float-right">
+      <button-submit :is-loading="form.isSubmitting" @clicked="registerAction">
+        {{ $t('bedrock-users.action.next')}}
+      </button-submit>
+    </div>
   </div>
 </template>
 
@@ -80,7 +87,7 @@ export default {
 
     registerAction() {
       if (!this.phoneValid) {
-        this.apiErrors.form = this.$t('misc.validations.phone.invalid');
+        this.apiErrors.form = this.$t('bedrock-users.validations.phone.invalid');
         return;
       }
 

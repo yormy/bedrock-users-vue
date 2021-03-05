@@ -1,19 +1,23 @@
 <template>
-  <div class="container">
+  <div class="card-body">
+
     <confirm-action
       :confirm-title="confirmableAction.title"
-      :confirm-sent-to="`Sent to ${sentToPhone}`"
+      :confirm-sent-to="sentToPhone"
       :confirm-description="confirmableAction.description"
       :method="confirmableAction.method"
       verify-type="CODE"
-      :verify-action-url="route('api.v1.user.registration.verify.verify')"
-      :verify-resend-action-url="route('api.v1.user.registration.resend')"
+      :verify-action-url="route('api.v1.registration.phone.verify')"
+      :verify-resend-action-url="route('api.v1.registration.phone.verify.resend')"
       :xid="confirmableAction.xid"
       @verified="verified"
     >
     </confirm-action>
 
-    <button @click="changePhone">Click to Change phone</button>
+    <div class="mt-3">
+      <button @click="changePhone">{{ $t('bedrock-users.registration.click_to_change_phone') }}</button>
+    </div>
+
   </div>
 </template>
 

@@ -15,5 +15,7 @@
   "view" : "Bekijken",
   "request_change" : "Verzoek wijziging",
   "confirm": "Bevestigen",
-  "resend" : "Opnieuw versturen"
+  "resend" : "Opnieuw versturen",
+  "next" : "Volgende",
+  "skip" : "Overslaan"
 }

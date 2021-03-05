@@ -1,1 +1,5 @@
-{}
+{
+   "phone" : {
+     "invalid" : "This is not a valid phone number"
+   }
+}

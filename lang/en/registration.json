@@ -3,6 +3,12 @@
     "email": {
       "label": "Your email address"
     },
+
+    "phone": {
+      "title": "Your phone number",
+      "description": "Why we need your phone...</br>We need your phone number to be able to verify your identity</br>after which you will be granted access to our portal"
+    },
+
     "password" : {
       "label": "Type a new password",
       "hint": "A complex password of at least 8 characters"
@@ -15,8 +21,13 @@
       "label": "I agree to the above",
       "error": "you must agree before you can continue",
       "warning_marketing": "You probably forgot to check this"
+    },
+    "invite_code" : {
+      "title_optional" : "Optional invite code",
+      "title_required" : "Required invite code"
     }
   },
+  "click_to_change_phone" : "change your phone number",
 
   "terms" : {
     "general" : "In order to optimally use the possibilities you need to agree to the general conditions and privacy policy",

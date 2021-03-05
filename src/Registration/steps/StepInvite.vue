@@ -1,6 +1,12 @@
 <template>
   <div class="container">
-    <h1>invite code {{ inviteCodeSetting }}</h1>
+    <h1 v-if="'OPTIONAL' === inviteCodeSetting ">
+      {{$t('bedrock-users.registration.input.invite_code.title_optional')}}
+    </h1>
+    <h1 v-else>
+      {{$t('bedrock-users.registration.input.invite_code.title_required')}}
+    </h1>
+
     <CodeInput
       :loading="form.isSubmitting"
       ref="codeInputComponent"
@@ -15,17 +21,23 @@
       {{ apiErrors.inviteCode }}
     </div>
 
-    <button-submit :is-loading="form.isSubmitting" @clicked="inviteAction"> Finish </button-submit>
+    <div class="mt-3">
 
-    <button
-      type="submit"
-      v-if="skippableInviteCode"
-      class="btn btn-secondary"
-      :disabled="form.isSubmitting"
-      @click.prevent="inviteSkipAction"
-    >
-      skip
-    </button>
+      <button
+        type="submit"
+        v-if="skippableInviteCode"
+        class="btn btn-secondary"
+        :disabled="form.isSubmitting"
+        @click.prevent="inviteSkipAction"
+      >
+        {{ $t('bedrock-users.action.skip') }}
+      </button>
+
+      <button-submit :is-loading="form.isSubmitting" @clicked="inviteAction">
+        {{ $t('bedrock-users.action.next') }}
+      </button-submit>
+
+    </div>
   </div>
 </template>
 

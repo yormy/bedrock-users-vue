@@ -15,5 +15,7 @@
   "view" : "View",
   "request_change" : "Request change",
   "confirm": "Confirm",
-  "resend" : "Resend"
+  "resend" : "Resend",
+  "next" : "Next",
+  "skip" : "Skip"
 }
