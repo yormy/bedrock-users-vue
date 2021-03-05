@@ -10,10 +10,10 @@
             <span class="fa fa-spinner fa-spin"></span>
           </div>
           <div v-else class="text-right">
-            <div v-if="form.messages.success" class="alert alert-success">
+            <div v-if="form.messages.success" class="text-success">
               {{ form.messages.success }}
             </div>
-            <div v-if="form.messages.error" class="alert alert-danger">
+            <div v-if="form.messages.error" class="text-danger">
               {{ form.messages.error }}
             </div>
           </div>
