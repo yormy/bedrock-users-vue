@@ -18,7 +18,7 @@
   "security" : {
     "trust_this_browser" : {
       "title" : "Vertrouw deze browser",
-      "description" : ""
+      "description" : "daarna kun je 90 dagen inloggen met deze computer op elke lokatie"
     }
   },
   "no_account_signup" : {

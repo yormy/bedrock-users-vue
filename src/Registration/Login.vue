@@ -133,13 +133,17 @@
 
             <div class="form-group row mb-3">
               <div class="col-sm-12">
-                <v-switch v-model="login.trustBrowser" color="success" hide-details></v-switch>
-                {{ $t('bedrock-users.login.security.trust_this_browser.title') }}
-              </div>
-              <div class="col-sm-12">
+                <v-switch
+                  :label="$t('bedrock-users.login.security.trust_this_browser.title')"
+                  v-model="login.trustBrowser"
+                  color="success"
+                  hide-details>
+                </v-switch>
                 <small class="form-text text-muted">
                   {{ $t('bedrock-users.login.security.trust_this_browser.description') }}
                 </small>
+              </div>
+              <div class="col-sm-12">
               </div>
             </div>
           </div>

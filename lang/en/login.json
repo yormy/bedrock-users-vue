@@ -18,7 +18,7 @@
   "security" : {
     "trust_this_browser" : {
       "title" : "Trust this browser",
-      "description" : "Trust this browser"
+      "description" : "then you can login with this computer for the next 90 days from any location"
     }
   },
   "no_account_signup" : {
