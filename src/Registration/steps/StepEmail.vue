@@ -96,7 +96,7 @@
 
     <div class="d-flex justify-space-between mt-3">
       <div>
-        <a :href="route('user.login')">
+        <a :href="route('member.login')">
           <button id="btnShowLogin" @click="forgot = false">
             <span class="fal fa-unlock mr-1"></span>
             {{ $t('bedrock-users.login.button') }}

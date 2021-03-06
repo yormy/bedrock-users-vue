@@ -8,7 +8,7 @@ import Members from './New/Members.vue';
 import Registration from './Registration/Registration.vue';
 import Verify from './Registration/Verify.vue';
 import VerifyPassword from './confirm-actions/VerifyPassword.vue';
-import VerifyLoginname from './confirm-actions/VerifyLoginname.vue';
+import VerifyLoginname from './confirm-actdions/VerifyLoginname.vue';
 
 import Logout from './Login/Logout.vue';
 
