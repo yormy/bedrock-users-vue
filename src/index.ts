@@ -3,7 +3,7 @@ import LogActivityActivities from './New/LogActivityActivities.vue';
 import LogActivityAudit from './New/LogActivityAudit.vue';
 import Registrations from './New/Registrations.vue';
 import Subscriptions from './New/Subscriptions.vue';
-import Users from './New/Users.vue';
+import Members from './New/Members.vue';
 
 import Registration from './Registration/Registration.vue';
 import Verify from './Registration/Verify.vue';
@@ -35,7 +35,7 @@ export {
   LogActivityAudit,
   Registrations,
   Subscriptions,
-  Users,
+  Members,
   Registration,
   Logout,
   LoginWrapper,
