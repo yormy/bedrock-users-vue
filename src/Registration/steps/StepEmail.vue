@@ -52,6 +52,7 @@
     <ValidationProvider v-slot="{ errors }" rules="agreed" name="termsGeneral" ref="termsGeneral">
       <div>
         {{ $t('bedrock-users.registration.terms.general') }}
+        <a :href="route('guest.terms.general')" target="_blank"><span class="fal fa-external-link">&nbsp;</span></a>
         <v-checkbox
           v-model="registration.termsGeneral"
           class="mt-0"
@@ -64,6 +65,7 @@
 
     <ValidationProvider name="termsMarketing" rules="agreed" ref="termsMarketing">
       {{ $t('bedrock-users.registration.terms.marketing') }}
+      <a :href="route('guest.terms.marketing')"  target="_blank"><span class="fal fa-external-link">&nbsp;</span></a>
       <div>
         <v-checkbox
           v-model="registration.termsMarketing"

@@ -343,14 +343,17 @@ export default {
       this.$http
         .post(this.loginActionUrl, data)
         .then((response) => {
-          if (response.data.success) {
-            this.successMessage = response.data.message;
-            storeTokens(response.data.data, this.loginas);
-            // put on end of stack
-            window.setTimeout(() => {
-              window.location.reload();
-            }, 0);
-          }
+          window.setTimeout(() => {
+            window.location.reload();
+          }, 0);
+          // if (response.data.success) {
+          //   this.successMessage = response.data.message;
+          //   storeTokens(response.data.data, this.loginas);
+          //   // put on end of stack
+          //   window.setTimeout(() => {
+          //     window.location.reload();
+          //   }, 0);
+          // }
         })
         .catch((error) => {
           this.clearInput();

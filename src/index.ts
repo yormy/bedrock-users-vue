@@ -22,9 +22,10 @@ import MyNotifications from './user/account/MyNotifications.vue';
 import MyNotificationSettings from './user/account/MyNotificationSettings.vue';
 import ImpersonatedWarning from './user/ImpersonatedWarning.vue';
 import AutoLogout from './user/AutoLogout.vue';
+import TermsAgree from './user/TermsAgree.vue';
 
 import Billing from './user/account/billing/Billing.vue';
-
+import Reverify from './Registration/Reverify.vue';
 
 import translations from '../lang/translations';
 
@@ -50,5 +51,7 @@ export {
   MyNotificationSettings,
   ImpersonatedWarning,
   AutoLogout,
-  Billing
+  Billing,
+  Reverify,
+  TermsAgree,
 };

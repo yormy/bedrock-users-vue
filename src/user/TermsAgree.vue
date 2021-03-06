@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1>{{ $t('misc.terms.agree_to_terms') }}</h1>
+    <h1>{{ $t('bedrock-users.profile.terms.agree_to_terms') }}</h1>
 
     <ValidationProvider
       v-show="!generalAgreed"
@@ -10,11 +10,12 @@
       ref="termsGeneral"
     >
       <div>
-        {{ $t('misc.terms.statement.general') }}
+        {{ $t('bedrock-users.profile.terms.statement.general') }}
+        <a :href="route('guest.terms.general')" target="_blank"><span class="fal fa-external-link">&nbsp;</span></a>
         <v-checkbox
           v-model="form.termsGeneral"
           class="mt-0"
-          :label="$t('misc.terms.i_agree_to_above')"
+          :label="$t('bedrock-users.profile.terms.i_agree_to_above')"
           :error-messages="errors"
         >
         </v-checkbox>
@@ -27,7 +28,8 @@
       rules="agreed"
       ref="termsMarketing"
     >
-      {{ $t('misc.terms.statement.marketing') }}
+      {{ $t('bedrock-users.profile.terms.statement.marketing') }}
+      <a :href="route('guest.terms.marketing')"  target="_blank"><span class="fal fa-external-link">&nbsp;</span></a>
       <div>
         <v-checkbox
           v-model="form.termsMarketing"
@@ -37,7 +39,7 @@
         >
           <template v-slot:label>
             <div :class="marketing.errorMessage !== '' ? 'red--text' : ''">
-              {{ $t('misc.terms.i_agree_to_above') }}
+              {{ $t('bedrock-users.profile.terms.i_agree_to_above') }}
             </div>
             <div v-if="marketing.errorMessage" class="red--text">
               &nbsp; == {{ marketing.errorMessage }}
@@ -52,13 +54,12 @@
     </div>
 
     <button-submit :is-loading="state.isSubmitting" @clicked="termsAgreeAction">
-      {{ $t('misc.terms.agreed') }}
+      {{ $t('bedrock-users.profile.terms.agreed') }}
     </button-submit>
   </div>
 </template>
 
 <script>
-// import axios from 'axios';
 
 export default {
   props: {
@@ -96,7 +97,7 @@ export default {
 
       lang: {
         error: {
-          marketing: this.$t('misc.terms.marketing_push'),
+          marketing: this.$t('bedrock-users.profile.terms.marketing_push'),
         },
       },
     };

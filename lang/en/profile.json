@@ -156,5 +156,22 @@
 
   "current_email": {
     "label" : "Your current email address"
+  },
+
+  "terms" : {
+    "i_agree_to_above" : "I agree to the above",
+    "agree_to_terms":"agree to the terms",
+    "agreed" : "agreed",
+    "marketing_push" : "You probably forgot to check this",
+    "statement" : {
+      "marketing" : "I would like to be kept up to date with the latest items and I know I can unsubscribe at any moment",
+      "general" : "In order to use you need to agree to the GENERAL CONDITIONS & PRIVACY"
+    },
+    "type" : "type",
+    "locale" : "locale",
+    "raw_content": "raw_content",
+    "summary_changes": "summary_changes",
+    "agreements" : "agreements",
+    "explicit" : "explicit"
   }
 }

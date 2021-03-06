@@ -158,5 +158,22 @@
 
   "current_email": {
     "label" : "Je huidige email adres"
+  },
+
+  "terms" : {
+    "i_agree_to_above" : "Ik ga akkoord met het bovenstaande",
+    "agree_to_terms":"Akkoord gaan",
+    "agreed" : "Akkoord",
+    "marketing_push" : "Dit ben je waarschijnlijk nog vergeten",
+    "statement" : {
+      "marketing" : "Ik blijf graag op de hoogte van de laatste ontwikkelingen en ik weet dat ik me altijd uit kan schrijven",
+      "general" : "Je moet akkoord gaan met de algemene voorwaarden en privacy voorwaarden"
+    },
+    "type" : "type",
+    "locale" : "locale",
+    "raw_content": "ruwe inhoud",
+    "summary_changes": "samenvatting veranderingen",
+    "agreements" : "agreements",
+    "explicit" : "expliciet"
   }
 }
