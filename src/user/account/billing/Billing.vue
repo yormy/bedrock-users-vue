@@ -125,7 +125,7 @@ export default {
       this.form.showPlans = false;
 
       this.checkout.client_secret = null;
-      const url = this.route('api.v1.user.account.billing.checkout.stripe.plan', xid);
+      const url = this.route('api.v1.member.account.billing.checkout.stripe.plan', xid);
 
       this.$http
         .get(url)
@@ -153,7 +153,7 @@ export default {
 
     cancel(xid) {
       this.form.isLoading = xid;
-      const url = this.route('api.v1.user.account.billing.cancel');
+      const url = this.route('api.v1.member.account.billing.cancel');
 
       this.$http
         .get(url)
@@ -174,7 +174,7 @@ export default {
 
     resume(xid) {
       this.form.isLoading = xid;
-      const url = this.route('api.v1.user.account.billing.resume');
+      const url = this.route('api.v1.member.account.billing.resume');
 
       this.$http
         .get(url)

@@ -105,7 +105,7 @@ export default {
     switchNotification(xid, state, channel) {
       this.isLoading = channel + xid;
 
-      const url = this.route('api.v1.user.account.notifications.settings.subscribe', xid);
+      const url = this.route('api.v1.member.account.notifications.settings.subscribe', xid);
 
       this.$http
         .put(url, { subscribe: state, channel })

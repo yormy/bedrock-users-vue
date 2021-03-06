@@ -77,7 +77,7 @@ export default {
 
       // this.checkout.client_secret = null;
       const url = this.route(
-        'api.v1.user.account.billing.payment-method.markAsDefault',
+        'api.v1.member.account.billing.payment-method.markAsDefault',
         paymentMethodId,
       );
 

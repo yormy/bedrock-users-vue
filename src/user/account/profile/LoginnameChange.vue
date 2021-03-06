@@ -101,8 +101,8 @@
             :confirm-description="confirmableAction.description"
             :method="confirmableAction.method"
             verify-type="CODE"
-            :verify-action-url="route('api.v1.user.registration.verify.verify')"
-            :verify-resend-action-url="route('api.v1.user.registration.resend')"
+            :verify-action-url="route('api.v1.member.registration.verify.verify')"
+            :verify-resend-action-url="route('api.v1.member.registration.resend')"
             :xid="confirmableAction.xid"
           >
           </confirm-action>

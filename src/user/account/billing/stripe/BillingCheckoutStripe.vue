@@ -378,7 +378,7 @@ export default {
         coupon_code: this.coupon_code,
       };
 
-      const urlPayment = this.route('api.v1.user.account.billing.checkout.stripe.process');
+      const urlPayment = this.route('api.v1.member.account.billing.checkout.stripe.process');
       this.$http
         .post(urlPayment, data)
         .then(response => {
@@ -410,7 +410,7 @@ export default {
     applyCoupon() {
       this.state.isApplyingCoupon = true;
 
-      const urlCoupon = this.route('api.v1.user.account.billing.checkout.coupon', {
+      const urlCoupon = this.route('api.v1.member.account.billing.checkout.coupon', {
         coupon: this.coupon_code,
       });
 

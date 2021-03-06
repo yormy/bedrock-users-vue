@@ -104,7 +104,7 @@ export default {
         return;
       }
 
-      const url = this.route('api.v1.user.account.notifications.mark-read', item.id);
+      const url = this.route('api.v1.member.account.notifications.mark-read', item.id);
 
       this.$http
         .put(url, {})
@@ -120,7 +120,7 @@ export default {
         return;
       }
 
-      const url = this.route('api.v1.user.account.notifications.mark-unread', item.id);
+      const url = this.route('api.v1.member.account.notifications.mark-unread', item.id);
 
       this.$http
         .put(url, {})
@@ -132,7 +132,7 @@ export default {
     },
 
     markAllAsRead() {
-      const url = this.route('api.v1.user.account.notifications.mark-all-read');
+      const url = this.route('api.v1.member.account.notifications.mark-all-read');
 
       this.$http
         .put(url, {})

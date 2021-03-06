@@ -152,7 +152,7 @@ export default {
         asDefault: this.asDefault,
       };
 
-      const urlPaymentMethod = this.route('api.v1.user.account.billing.payment-method.store');
+      const urlPaymentMethod = this.route('api.v1.member.account.billing.payment-method.store');
       this.$http
         .post(urlPaymentMethod, data)
         .then(() => {
