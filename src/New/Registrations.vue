@@ -1,19 +1,15 @@
 <template>
-  <v-card>
-    <v-card-title>
-      <v-row class="pb-0">
-        <v-col class="pb-0 pt-0">
-          <h1>{{ title }}</h1>
-        </v-col>
-      </v-row>
-
-      <v-row class="pb-0 pt-0">
-        <v-col cols="6" class="pb-0 pt-0"> </v-col>
-        <v-col cols="6" class="pb-0 pt-0">
+  <v-card class="datatable">
+    <div class="d-flex justify-content-between">
+      <div>
+        <div class="tabletitle">{{ title }}</div>
+      </div>
+      <div>
+        <div class="tablesearch">
           <datatable-search :search-input.sync="searchInput"></datatable-search>
-        </v-col>
-      </v-row>
-    </v-card-title>
+        </div>
+      </div>
+    </div>
 
     <v-data-table
       :headers="headers"
@@ -77,35 +73,35 @@ export default {
 
       this.headers.push(
         {
-          text: this.$t('misc.email'),
+          text: this.$t('bedrock-users.misc.email'),
           value: 'email',
         },
         {
-          text: this.$t('misc.registration.locale'),
+          text: this.$t('bedrock-users.misc.registration.locale'),
           value: 'locale',
         },
         {
-          text: this.$t('misc.registration.timezone'),
+          text: this.$t('bedrock-users.misc.registration.timezone'),
           value: 'timezone',
         },
         {
-          text: this.$t('misc.registration.terms_general'),
+          text: this.$t('bedrock-users.misc.registration.terms_general'),
           value: 'terms_general_agreed',
         },
         {
-          text: this.$t('misc.registration.terms_marketing'),
+          text: this.$t('bedrock-users.misc.registration.terms_marketing'),
           value: 'terms_marketing_agreed',
         },
         {
-          text: this.$t('misc.registration.invite_code'),
+          text: this.$t('bedrock-users.misc.registration.invite_code'),
           value: 'invite_code',
         },
         {
-          text: this.$t('misc.registration.is_finished'),
+          text: this.$t('bedrock-users.misc.registration.is_finished'),
           value: 'is_finished',
         },
         {
-          text: this.$t('misc.created_at_humans'),
+          text: this.$t('bedrock-users.misc.created_at_humans'),
           value: 'created_at_humans',
         },
         {

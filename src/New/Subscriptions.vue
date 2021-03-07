@@ -1,18 +1,15 @@
 <template>
-  <v-card>
-    <v-card-title>
-      <v-row class="pb-0">
-        <v-col class="pb-0 pt-0">
-          <h1>{{ title }}</h1>
-        </v-col>
-      </v-row>
-      <v-row class="pb-0 pt-0">
-        <v-col cols="6" class="pb-0 pt-0"> </v-col>
-        <v-col cols="6" class="pb-0 pt-0">
+  <v-card class="datatable">
+    <div class="d-flex justify-content-between">
+      <div>
+        <div class="tabletitle">{{ title }}</div>
+      </div>
+      <div>
+        <div class="tablesearch">
           <datatable-search :search-input.sync="searchInput"></datatable-search>
-        </v-col>
-      </v-row>
-    </v-card-title>
+        </div>
+      </div>
+    </div>
 
     <v-data-table
       :headers="headers"
@@ -85,7 +82,7 @@ export default {
       this.headers = [];
 
       this.headers.push({
-        text: this.$t('misc.email'),
+        text: this.$t('bedrock-users.misc.email'),
         value: 'email',
       });
 

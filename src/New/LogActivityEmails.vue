@@ -1,19 +1,15 @@
 <template>
-  <v-card>
-    <v-card-title>
-      <v-row class="pb-0">
-        <v-col class="pb-0 pt-0">
-          <h1>{{ title }}</h1>
-        </v-col>
-      </v-row>
-
-      <v-row>
-        <v-col cols="6" class="pb-0 pt-0"></v-col>
-        <v-col cols="6" class="pb-0 pt-0">
+  <v-card class="datatable">
+    <div class="d-flex justify-content-between">
+      <div>
+        <div class="tabletitle">{{ title }}</div>
+      </div>
+      <div>
+        <div class="tablesearch">
           <datatable-search :search-input.sync="searchInput"></datatable-search>
-        </v-col>
-      </v-row>
-    </v-card-title>
+        </div>
+      </div>
+    </div>
 
     <v-data-table
       :headers="headers"
@@ -34,7 +30,7 @@
 
       <template v-slot:[`item.actions`]="{ item }">
         <button type="button" class="btn btn-primary" @click="openEmail(item)">
-          {{ $t('misc.open') | capitalizeFirst }}
+          {{ $t('bedrock-users.misc.open') | capitalizeFirst }}
         </button>
       </template>
     </v-data-table>
@@ -91,11 +87,11 @@ export default {
       if (this.withUser) {
         this.headers.push(
           {
-            text: this.$t('misc.user'),
+            text: this.$t('bedrock-users.misc.user'),
             value: 'person.xid',
           },
           {
-            text: this.$t('misc.email'),
+            text: this.$t('bedrock-users.misc.email'),
             value: 'person.email',
           },
         );
@@ -103,27 +99,27 @@ export default {
 
       this.headers.push(
         {
-          text: this.$t('misc.emails.recipient'),
+          text: this.$t('bedrock-users.misc.emails.recipient'),
           value: 'recipient',
         },
         {
-          text: this.$t('misc.emails.subject'),
+          text: this.$t('bedrock-users.misc.emails.subject'),
           value: 'subject',
         },
         {
-          text: this.$t('misc.emails.opens'),
+          text: this.$t('bedrock-users.misc.emails.opens'),
           value: 'opens',
         },
         {
-          text: this.$t('misc.emails.clicks'),
+          text: this.$t('bedrock-users.misc.emails.clicks'),
           value: 'clicks',
         },
         {
-          text: this.$t('misc.created_at_humans'),
+          text: this.$t('bedrock-users.misc.created_at_humans'),
           value: 'created_at_humans',
         },
         {
-          text: this.$t('misc.actions'),
+          text: this.$t('bedrock-users.misc.actions'),
           value: 'actions',
           sortable: false,
         },

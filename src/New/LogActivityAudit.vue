@@ -1,19 +1,15 @@
 <template>
-  <v-card>
-    <v-card-title>
-      <v-row class="pb-0">
-        <v-col class="pb-0 pt-0">
-          <h1>{{ title }}</h1>
-        </v-col>
-      </v-row>
-
-      <v-row>
-        <v-col cols="6" class="pb-0 pt-0"></v-col>
-        <v-col cols="6" class="pb-0 pt-0">
+  <v-card class="datatable">
+    <div class="d-flex justify-content-between">
+      <div>
+        <div class="tabletitle">{{ title }}</div>
+      </div>
+      <div>
+        <div class="tablesearch">
           <datatable-search :search-input.sync="searchInput"></datatable-search>
-        </v-col>
-      </v-row>
-    </v-card-title>
+        </div>
+      </div>
+    </div>
 
     <v-data-table
       :headers="headers"
@@ -93,11 +89,11 @@ export default {
       if (this.withUser) {
         this.headers.push(
           {
-            text: this.$t('misc.user'),
+            text: this.$t('bedrock-users.misc.user'),
             value: 'person.xid',
           },
           {
-            text: this.$t('misc.email'),
+            text: this.$t('bedrock-users.misc.email'),
             value: 'person.email',
           },
         );
@@ -105,31 +101,31 @@ export default {
 
       this.headers.push(
         {
-          text: this.$t('misc.event'),
+          text: this.$t('bedrock-users.misc.event'),
           value: 'event',
         },
         {
-          text: this.$t('misc.ip-address'),
+          text: this.$t('bedrock-users.misc.ip-address'),
           value: 'ip_address',
         },
         {
-          text: this.$t('misc.diff'),
+          text: this.$t('bedrock-users.misc.diff'),
           value: 'diff',
         },
         {
-          text: this.$t('misc.impersonated'),
+          text: this.$t('bedrock-users.misc.impersonated'),
           value: 'impersonator.email',
         },
         {
-          text: this.$t('misc.auditable'),
+          text: this.$t('bedrock-users.misc.auditable'),
           value: 'auditable_type',
         },
         {
-          text: this.$t('misc.ip-address'),
+          text: this.$t('bedrock-users.misc.ip-address'),
           value: 'ip_address',
         },
         {
-          text: this.$t('misc.created_at_humans'),
+          text: this.$t('bedrock-users.misc.created_at_humans'),
           value: 'created_at_humans',
         },
         {
