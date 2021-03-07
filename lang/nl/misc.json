@@ -33,6 +33,10 @@
   },
 
   "email_suppressed" : "Uitgeschreven",
-  "processing" : "Verwerken..."
+  "processing" : "Verwerken...",
+  "email" : "email",
+  "name" : "naam",
+  "user_ip_address" : "IP gebruiker",
+  "user" : "gebruiker"
 
 }

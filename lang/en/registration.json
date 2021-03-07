@@ -46,6 +46,15 @@
       "message2" : "Encrypting your information",
       "message3" : "Increasing security level"
     }
+  },
+
+  "field" : {
+    "locale" : "Language",
+    "timezone" : "Timezone",
+    "terms_general": "Conditions",
+    "terms_marketing": "Marketing",
+    "invite_code": "Invite code",
+    "is_finished": "Finished"
   }
 
 }

@@ -101,31 +101,31 @@ export default {
 
       this.headers.push(
         {
-          text: this.$t('bedrock-users.misc.event'),
+          text: this.$t('bedrock-core.misc.description'),
           value: 'event',
         },
         {
-          text: this.$t('bedrock-users.misc.ip-address'),
+          text: this.$t('bedrock-users.misc.user_ip_address'),
           value: 'ip_address',
         },
         {
-          text: this.$t('bedrock-users.misc.diff'),
+          text: this.$t('bedrock-core.misc.difference'),
           value: 'diff',
         },
         {
-          text: this.$t('bedrock-users.misc.impersonated'),
+          text: this.$t('bedrock-core.misc.impersonated'),
           value: 'impersonator.email',
         },
         {
-          text: this.$t('bedrock-users.misc.auditable'),
+          text: this.$t('bedrock-core.misc.auditable'),
           value: 'auditable_type',
         },
         {
-          text: this.$t('bedrock-users.misc.ip-address'),
+          text: this.$t('bedrock-users.misc.ip_address'),
           value: 'ip_address',
         },
         {
-          text: this.$t('bedrock-users.misc.created_at_humans'),
+          text: this.$t('bedrock-users.misc.created_at'),
           value: 'created_at_humans',
         },
         {

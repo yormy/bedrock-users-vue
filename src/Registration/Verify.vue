@@ -13,7 +13,7 @@
               <v-text-field
                 autocomplete="confirmToken"
                 v-model="confirmToken"
-                :label="$t('misc.confirmtoken.field.label')"
+                :label="$t('bedrock-users.misc.confirmtoken.field.label')"
                 :hint="''"
                 :type="'text'"
                 :error-messages="errors"

@@ -47,5 +47,14 @@
       "message2" : "Encrypten van je gegevens",
       "message3" : "Verhogen van het veiligheids niveau"
     }
+  },
+
+  "field" : {
+    "locale" : "Taal",
+    "timezone" : "Tijdzone",
+    "terms_general": "Voorwaarden",
+    "terms_marketing": "Marketing",
+    "invite_code": "Uitnodiging code",
+    "is_finished": "Voltooid"
   }
 }

@@ -60,7 +60,7 @@
             </div>
 
             <div v-show="authenticatorEnabled">
-              {{ $t('misc.login.authenticator_code.label') }}
+              {{ $t('bedrock-users.misc.login.authenticator_code.label') }}
               <CodeInput
                 :loading="formConfirmCode.isSubmitting"
                 :invalid-input="confirmCodeInvalid"
@@ -87,7 +87,7 @@
             </div>
 
             <button-submit :is-loading="form.isSubmitting" @clicked="submitChangeRequest">
-              {{ $t('misc.request_change') }}
+              {{ $t('bedrock-users.misc.request_change') }}
             </button-submit>
           </ValidationObserver>
         </div>

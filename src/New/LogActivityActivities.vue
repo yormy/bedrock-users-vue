@@ -82,15 +82,15 @@ export default {
 
       this.headers.push(
         {
-          text: this.$t('bedrock-users.misc.description'),
+          text: this.$t('bedrock-core.misc.description'),
           value: 'description',
         },
         {
-          text: this.$t('bedrock-users.misc.user_ip'),
+          text: this.$t('bedrock-users.misc.user_ip_address'),
           value: 'ip_user',
         },
         {
-          text: this.$t('bedrock-users.misc.created_at_humans'),
+          text: this.$t('bedrock-users.misc.created_at'),
           value: 'created_at_humans',
         },
         {

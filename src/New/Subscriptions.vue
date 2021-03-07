@@ -18,20 +18,7 @@
       item-key="xid"
       single-select
       class="elevation-1"
-      show-expand
     >
-      <!--      <template v-slot:item.raw_content="{ item }">-->
-      <!--        {{ item.raw_content | truncate(10) }}-->
-      <!--      </template>-->
-      <!--      <template v-slot:item.summary_changes="{ item }">-->
-      <!--        {{ item.summary_changes | truncate(10) }}-->
-      <!--      </template>-->
-
-      <template v-slot:expanded-item="{ headers, item }">
-        <td :colspan="headers.length">
-          {{ item }}
-        </td>
-      </template>
     </v-data-table>
   </v-card>
 </template>

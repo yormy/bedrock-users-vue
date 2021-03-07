@@ -33,5 +33,9 @@
     },
 
   "email_suppressed" : "Unsubscribed",
-  "processing" : "Processing..."
+  "processing" : "Processing...",
+  "email" : "email",
+  "name" : "name",
+  "user_ip_address" : "IP user",
+  "user" : "user"
 }

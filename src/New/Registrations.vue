@@ -18,20 +18,7 @@
       item-key="xid"
       single-select
       class="elevation-1"
-      show-expand
     >
-      <!--      <template v-slot:item.raw_content="{ item }">-->
-      <!--        {{ item.raw_content | truncate(10) }}-->
-      <!--      </template>-->
-      <!--      <template v-slot:item.summary_changes="{ item }">-->
-      <!--        {{ item.summary_changes | truncate(10) }}-->
-      <!--      </template>-->
-
-      <template v-slot:expanded-item="{ headers, item }">
-        <td :colspan="headers.length">
-          {{ item }}
-        </td>
-      </template>
     </v-data-table>
   </v-card>
 </template>
@@ -77,31 +64,31 @@ export default {
           value: 'email',
         },
         {
-          text: this.$t('bedrock-users.misc.registration.locale'),
+          text: this.$t('bedrock-users.registration.field.locale'),
           value: 'locale',
         },
         {
-          text: this.$t('bedrock-users.misc.registration.timezone'),
+          text: this.$t('bedrock-users.registration.field.timezone'),
           value: 'timezone',
         },
         {
-          text: this.$t('bedrock-users.misc.registration.terms_general'),
+          text: this.$t('bedrock-users.registration.field.terms_general'),
           value: 'terms_general_agreed',
         },
         {
-          text: this.$t('bedrock-users.misc.registration.terms_marketing'),
+          text: this.$t('bedrock-users.registration.field.terms_marketing'),
           value: 'terms_marketing_agreed',
         },
         {
-          text: this.$t('bedrock-users.misc.registration.invite_code'),
+          text: this.$t('bedrock-users.registration.field.invite_code'),
           value: 'invite_code',
         },
         {
-          text: this.$t('bedrock-users.misc.registration.is_finished'),
+          text: this.$t('bedrock-users.registration.field.is_finished'),
           value: 'is_finished',
         },
         {
-          text: this.$t('bedrock-users.misc.created_at_humans'),
+          text: this.$t('bedrock-users.misc.created_at'),
           value: 'created_at_humans',
         },
         {

@@ -130,11 +130,11 @@ export default {
       if (this.withUser) {
         this.headers.push(
           {
-            text: this.$t('misc.user'),
+            text: this.$t('bedrock-users.misc.user'),
             value: 'person.xid',
           },
           {
-            text: this.$t('misc.email'),
+            text: this.$t('bedrock-users.misc.email'),
             value: 'person.email',
           },
         );

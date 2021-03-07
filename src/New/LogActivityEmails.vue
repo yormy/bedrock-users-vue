@@ -99,27 +99,27 @@ export default {
 
       this.headers.push(
         {
-          text: this.$t('bedrock-users.misc.emails.recipient'),
+          text: this.$t('bedrock-core.dashboard.recent_emails.field.recipient'),
           value: 'recipient',
         },
         {
-          text: this.$t('bedrock-users.misc.emails.subject'),
+          text: this.$t('bedrock-core.dashboard.recent_emails.field.subject'),
           value: 'subject',
         },
         {
-          text: this.$t('bedrock-users.misc.emails.opens'),
+          text: this.$t('bedrock-core.dashboard.recent_emails.field.opens'),
           value: 'opens',
         },
         {
-          text: this.$t('bedrock-users.misc.emails.clicks'),
+          text: this.$t('bedrock-core.dashboard.recent_emails.field.clicks'),
           value: 'clicks',
         },
         {
-          text: this.$t('bedrock-users.misc.created_at_humans'),
+          text: this.$t('bedrock-users.misc.created_at'),
           value: 'created_at_humans',
         },
         {
-          text: this.$t('bedrock-users.misc.actions'),
+          text: '',
           value: 'actions',
           sortable: false,
         },

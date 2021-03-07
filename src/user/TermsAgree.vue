@@ -34,7 +34,7 @@
         <v-checkbox
           v-model="form.termsMarketing"
           class="mt-0"
-          :label="$t('misc.terms.i_agree_to_above')"
+          :label="$t('bedrock-users.misc.terms.i_agree_to_above')"
           :error-messages="form.errorMessage"
         >
           <template v-slot:label>

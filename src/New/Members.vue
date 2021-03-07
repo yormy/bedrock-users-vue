@@ -18,24 +18,7 @@
       item-key="xid"
       single-select
       class="elevation-1"
-      show-expand
     >
-      <template v-slot:[`item.raw_content`]="{ item }">
-        {{ item.raw_content | truncate(10) }}
-      </template>
-      <template v-slot:[`item.summary_changes`]="{ item }">
-        {{ item.summary_changes | truncate(10) }}
-      </template>
-
-      <template v-slot:expanded-item="{ headers, item }">
-        <td :colspan="headers.length">
-          {{ item.summary_changes }}
-          <br />
-          <hr />
-          <br />
-          {{ item.raw_content }}
-        </td>
-      </template>
     </v-data-table>
   </v-card>
 </template>
@@ -77,7 +60,7 @@ export default {
 
       this.headers.push(
         {
-          text: 'name', // this.$t('multilingual-admin.label.text'),
+          text: this.$t('bedrock-users.misc.name'),
           value: 'name',
         },
         {
@@ -85,7 +68,7 @@ export default {
           value: 'email',
         },
         {
-          text: this.$t('bedrock-users.misc.created_at_humans'),
+          text: this.$t('bedrock-users.misc.created_at'),
           value: 'created_at_humans',
         },
         {
