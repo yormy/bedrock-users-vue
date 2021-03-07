@@ -271,10 +271,10 @@ export default {
 
     const messageQuery = this.getQueryParams('message', window.location.href);
     if (messageQuery === 'session-expired') {
-      this.sessionExpiredMessage = 'Session Expired';
+      this.sessionExpiredMessage = this.$t('bedrock-users.login.autologout.warning.title');
     }
     if (messageQuery === 'relogin-changed') {
-      this.reloginChangedMessage = 'Session Expired';
+      this.reloginChangedMessage = this.$t('bedrock-users.login.autologout.warning.title');
     }
   },
 

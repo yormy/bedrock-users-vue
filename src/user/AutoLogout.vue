@@ -2,14 +2,11 @@
   <div>
     <v-dialog v-model="popupWarning" width="500" persistent>
       <v-card>
-        <v-card-title class="headline">Are you still there?</v-card-title>
+        <v-card-title class="headline">{{ $t('bedrock-users.login.autologout.warning.title')}}</v-card-title>
 
         <v-card-text>
-          <p>er is geen activiteit is gedetecteerd</p>
-          <p>je sessie zal verlopen over {{ timeLeft }}</p>
-          <!--          <p>If not, we will log you out to protect your privacy {{ timeLeft }}</p>-->
-          <!--          <p>otherise just move your mouse or scroll and we keep you logged in</p>-->
-          <button @click="prolongSession" class="btn btn-success">Prolongie sessie</button>
+          <p v-html="$t('bedrock-users.login.autologout.warning.description', {timeleft: timeLeft})"></p>
+          <button @click="prolongSession" class="btn btn-success">{{ $t('bedrock-users.login.autologout.warning.button')}}</button>
         </v-card-text>
       </v-card>
     </v-dialog>
@@ -42,9 +39,10 @@ export default {
   },
 
   created() {
-    if (isLoggedIn(this.loggedInAs)) {
-      this.createListeners();
-    }
+    this.createListeners();
+    // if (isLoggedIn(this.loggedInAs)) {
+    //   this.createListeners();
+    // }
   },
 
   beforeDestroy() {

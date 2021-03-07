@@ -50,5 +50,17 @@
     "loginname" : {
       "title" : "Reset loginname"
     }
+  },
+
+  "autologout" : {
+    "warning" : {
+      "title": "Are you still there?",
+      "description" : "There was no activity.</br>Your session will expire in {timeleft}",
+      "button" : "Click to stay logged in"
+    },
+    "login" : {
+      "title" : "Your session is expired, and for safety we logged you out"
+    }
+
   }
 }

@@ -49,5 +49,16 @@
     "loginname": {
       "title": "Reset loginname"
     }
+  },
+
+  "autologout" : {
+    "warning": {
+      "title": "Ben je er nog?",
+      "description": "Er is geen activiteit is gedetecteerd.</br>Je sessie zal verlopen over {timeleft}",
+      "button": "Klik om ingelogd te blijven"
+    },
+    "login": {
+      "title": "Sessie was verlopen, en voor de veiligheid hebben we je uitgelogd"
+    }
   }
 }
